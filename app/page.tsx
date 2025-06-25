@@ -168,7 +168,7 @@ export default function Home() {
               <div>
                 <textarea
                   name="message"
-                  placeholder="Message"
+                  placeholder="Notes"
                   rows={6}
                   className="w-full p-4 border border-gray-300 rounded focus:outline-none focus:border-gray-500 resize-none"
                 ></textarea>
