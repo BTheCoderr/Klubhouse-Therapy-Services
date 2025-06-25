@@ -125,10 +125,18 @@ export default function Home() {
           <h3 className="text-xl text-gray-600 mb-12 text-center font-light">#### Learn more about how Klubhouse Therapy Services can support your family:</h3>
           
           <div className="max-w-2xl mx-auto">
-            <form className="space-y-6">
+            <form 
+              name="contact" 
+              method="POST" 
+              data-netlify="true"
+              action="/thank-you"
+              className="space-y-6"
+            >
+              <input type="hidden" name="form-name" value="contact" />
               <div>
                 <input
                   type="text"
+                  name="name"
                   placeholder="Name"
                   className="w-full p-4 border border-gray-300 rounded focus:outline-none focus:border-gray-500"
                 />
@@ -136,6 +144,7 @@ export default function Home() {
               <div>
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email*"
                   required
                   className="w-full p-4 border border-gray-300 rounded focus:outline-none focus:border-gray-500"
@@ -144,12 +153,14 @@ export default function Home() {
               <div>
                 <input
                   type="tel"
+                  name="phone"
                   placeholder="Phone"
                   className="w-full p-4 border border-gray-300 rounded focus:outline-none focus:border-gray-500"
                 />
               </div>
               <div>
                 <textarea
+                  name="message"
                   placeholder="Message"
                   rows={6}
                   className="w-full p-4 border border-gray-300 rounded focus:outline-none focus:border-gray-500 resize-none"
@@ -157,7 +168,7 @@ export default function Home() {
               </div>
               <div className="text-left">
                 <label className="text-sm text-gray-600">
-                  <input type="file" className="mr-2" />
+                  <input type="file" name="attachment" className="mr-2" />
                   Attach Files
                 </label>
                 <p className="text-sm text-gray-500 mt-1">Attachments (0)</p>
