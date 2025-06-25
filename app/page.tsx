@@ -129,10 +129,16 @@ export default function Home() {
               name="contact" 
               method="POST" 
               data-netlify="true"
+              data-netlify-honeypot="bot-field"
               action="/thank-you"
               className="space-y-6"
             >
               <input type="hidden" name="form-name" value="contact" />
+              <p className="hidden">
+                <label>
+                  Don't fill this out if you're human: <input name="bot-field" />
+                </label>
+              </p>
               <div>
                 <input
                   type="text"
