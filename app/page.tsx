@@ -46,42 +46,36 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Header />
       
-      {/* Hero Section - Clean and Simple like Grace ABA */}
-      <section className="py-20 bg-white">
+      {/* Hero Section - Exactly like Grace ABA */}
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-6xl font-normal text-gray-800 mb-8">Welcome</h1>
+          <h1 className="text-6xl font-light text-gray-800 mb-8">Welcome</h1>
         </div>
       </section>
 
-      {/* About Us Section */}
+      {/* About Us Section - Grace ABA Style */}
       <section className="py-16 bg-white" id="about">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-normal text-gray-800 mb-4 text-center"># About Us</h2>
-          <h3 className="text-xl text-gray-600 mb-12 text-center">#### Specialized Care for Empowering Futures</h3>
+          <h2 className="text-4xl font-light text-gray-800 mb-4 text-center"># About Us</h2>
+          <h3 className="text-xl text-gray-600 mb-12 text-center font-light">#### Specialized Care for Empowering Futures</h3>
           
-          <div className="max-w-4xl mx-auto text-gray-700 leading-relaxed space-y-6">
-            <p>
-              At Klubhouse Therapy Services, we bring playful, personalized ABA care home—with heart. 
-              We believe every child shines brightest in a space that honors who they are, where they 
-              come from, and the unique story their family shares. Our focus is on building essential 
-              life skills, communication, and social development.
+          <div className="max-w-4xl mx-auto text-gray-700 leading-relaxed space-y-6 text-center">
+            <p className="text-lg">
+              At Klubhouse Therapy Services, our mission is to empower individuals and families through compassionate, specialized care. We provide tailored ABA therapy for neurodivergent children and adolescents that have an autism diagnosis. Our focus is on building essential life skills, communication, and social development.
             </p>
-            <p>
-              We are a clinician-owned practice that embraces diversity and complexity, 
-              offering personalized treatment for those who may require specific expertise. 
-              We aim for a deep understanding of each patient's unique needs to provide 
-              individualized tools and support for significantly improving quality of life.
+            <p className="text-lg">
+              We are a clinician-owned practice that embraces diversity and complexity, offering personalized treatment for those who may require specific expertise. We aim for a deep understanding of each patient's unique needs to provide individualized tools and support for significantly improving quality of life.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section - Grace ABA Grid Style */}
       <section className="py-16 bg-white" id="services">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-normal text-gray-800 mb-12 text-center">## Our Services</h2>
+          <h2 className="text-4xl font-light text-gray-800 mb-12 text-center">## Our Services</h2>
           
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {services.map((service, index) => (
               <div key={index} className="text-center">
                 <h3 className="text-xl font-medium text-gray-800 mb-4">#### {service.title}</h3>
@@ -94,10 +88,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Insurance Section */}
+      {/* Insurance Section - Grace ABA Style */}
       <section className="py-16 bg-white" id="insurance">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-normal text-gray-800 mb-12 text-center">## Accepted Insurance</h2>
+          <h2 className="text-4xl font-light text-gray-800 mb-12 text-center">## Accepted Insurance</h2>
           
           <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
             {insuranceLogos.map((logo) => (
@@ -116,19 +110,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sign Up Section */}
+      {/* Sign Up Section - Grace ABA Style */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-normal text-gray-800 mb-8">## Sign Up for ABA Services</h2>
+          <h2 className="text-4xl font-light text-gray-800 mb-8">## Sign Up for ABA Services</h2>
           <p className="text-2xl text-gray-600 mb-8">404-838-7010</p>
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact Section - Grace ABA Style */}
       <section className="py-16 bg-white" id="contact">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-normal text-gray-800 mb-4 text-center">## Contact Us</h2>
-          <h3 className="text-xl text-gray-600 mb-12 text-center">#### Learn more about how Klubhouse Therapy Services can support your family:</h3>
+          <h2 className="text-4xl font-light text-gray-800 mb-4 text-center">## Contact Us</h2>
+          <h3 className="text-xl text-gray-600 mb-12 text-center font-light">#### Learn more about how Klubhouse Therapy Services can support your family:</h3>
           
           <div className="max-w-2xl mx-auto">
             <form className="space-y-6">
