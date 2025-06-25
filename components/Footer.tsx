@@ -21,8 +21,8 @@ export const Footer = () => {
             <h3 className="text-2xl font-semibold mb-6">Klubhouse Therapy Services</h3>
             <p className="text-gray-600 mb-4">Atlanta, Georgia, United States</p>
             <p className="mb-2">
-              <a href="mailto:klubhousetherapyservices@outlook.com" className="text-gray-600 hover:text-primary">
-                klubhousetherapyservices@outlook.com
+              <a href="mailto:admin@klubhousetherapyservices.com" className="text-gray-600 hover:text-primary">
+                admin@klubhousetherapyservices.com
               </a>
             </p>
             <p>
