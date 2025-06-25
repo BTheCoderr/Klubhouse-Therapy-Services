@@ -56,8 +56,8 @@ export default function Home() {
       {/* About Us Section - Grace ABA Style */}
       <section className="py-16 bg-white" id="about">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-light text-gray-800 mb-4 text-center"># About Us</h2>
-          <h3 className="text-xl text-gray-600 mb-12 text-center font-light">#### Specialized Care for Empowering Futures</h3>
+          <h2 className="text-4xl font-light text-gray-800 mb-4 text-center">About Us</h2>
+          <h3 className="text-xl text-gray-600 mb-12 text-center font-light">Specialized Care for Empowering Futures</h3>
           
           <div className="max-w-4xl mx-auto text-gray-700 leading-relaxed space-y-6 text-center">
             <p className="text-lg">
@@ -73,12 +73,12 @@ export default function Home() {
       {/* Services Section - Grace ABA Grid Style */}
       <section className="py-16 bg-white" id="services">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-light text-gray-800 mb-12 text-center">## Our Services</h2>
+          <h2 className="text-4xl font-light text-gray-800 mb-12 text-center">Our Services</h2>
           
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {services.map((service, index) => (
               <div key={index} className="text-center">
-                <h3 className="text-xl font-medium text-gray-800 mb-4">#### {service.title}</h3>
+                <h3 className="text-xl font-medium text-gray-800 mb-4">{service.title}</h3>
                 <p className="text-gray-600 leading-relaxed">
                   {service.description}
                 </p>
@@ -91,7 +91,7 @@ export default function Home() {
       {/* Insurance Section - Grace ABA Style */}
       <section className="py-16 bg-white" id="insurance">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-light text-gray-800 mb-12 text-center">## Accepted Insurance</h2>
+          <h2 className="text-4xl font-light text-gray-800 mb-12 text-center">Accepted Insurance</h2>
           
           <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
             {insuranceLogos.map((logo) => (
@@ -113,7 +113,7 @@ export default function Home() {
       {/* Sign Up Section - Grace ABA Style */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-light text-gray-800 mb-8">## Sign Up for ABA Services</h2>
+          <h2 className="text-4xl font-light text-gray-800 mb-8">Sign Up for ABA Services</h2>
           <p className="text-2xl text-gray-600 mb-8">404-838-7010</p>
         </div>
       </section>
@@ -121,8 +121,8 @@ export default function Home() {
       {/* Contact Section - Grace ABA Style */}
       <section className="py-16 bg-white" id="contact">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-light text-gray-800 mb-4 text-center">## Contact Us</h2>
-          <h3 className="text-xl text-gray-600 mb-12 text-center font-light">#### Learn more about how Klubhouse Therapy Services can support your family:</h3>
+          <h2 className="text-4xl font-light text-gray-800 mb-4 text-center">Contact Us</h2>
+          <h3 className="text-xl text-gray-600 mb-12 text-center font-light">Learn more about how Klubhouse Therapy Services can support your family:</h3>
           
           <div className="max-w-2xl mx-auto">
             <form 
@@ -181,7 +181,7 @@ export default function Home() {
               </div>
               <button
                 type="submit"
-                className="bg-blue-600 text-white px-8 py-3 rounded hover:bg-blue-700 transition-colors"
+                className="bg-klubhouse-gold text-klubhouse-black px-8 py-3 rounded hover:bg-klubhouse-accent transition-colors font-medium"
               >
                 Send
               </button>
