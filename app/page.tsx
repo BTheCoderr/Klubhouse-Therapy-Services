@@ -134,6 +134,7 @@ export default function Home() {
               className="space-y-6"
             >
               <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="email-to" value="admin@klubhousetherapyservices.com" />
               <p className="hidden">
                 <label>
                   Don't fill this out if you're human: <input name="bot-field" />
