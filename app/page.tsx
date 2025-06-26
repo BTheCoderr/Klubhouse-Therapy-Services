@@ -325,9 +325,9 @@ export default function Home() {
           
           <div className="max-w-2xl mx-auto">
             <div className="bg-gray-50 p-8 rounded-2xl shadow-lg">
-              <form 
-                name="contact" 
-                data-netlify="true" 
+              <form
+                name="contact"
+                data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 className="space-y-6"
                 action="/thank-you"
