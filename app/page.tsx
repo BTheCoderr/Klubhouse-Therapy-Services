@@ -409,12 +409,12 @@ export default function Home() {
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 className="space-y-6"
-                action="/thank-you"
+                action="/?success=1"
                 method="POST"
+                encType="application/x-www-form-urlencoded"
               >
                 <input type="hidden" name="form-name" value="contact" />
                 
-                {/* Honeypot field */}
                 <p className="hidden">
                   <label>
                     Don't fill this out if you're human: <input name="bot-field" />
@@ -465,8 +465,6 @@ export default function Home() {
                   </label>
                   <p className="text-sm text-gray-500 mt-1">Attachments (0)</p>
                 </div>
-
-                <input type="hidden" name="form-name" value="contact" />
 
                 <button
                   type="submit"

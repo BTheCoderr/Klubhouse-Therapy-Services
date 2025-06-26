@@ -8,6 +8,10 @@
 [functions]
   external_node_modules = ["sharp"]
 
+# Form handling
+[build.environment]
+  NETLIFY_FORMS_DETECT = "true"
+
 # Form notifications
 [[forms]]
   name = "contact"
