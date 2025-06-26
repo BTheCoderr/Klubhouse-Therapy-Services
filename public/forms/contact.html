@@ -4,7 +4,7 @@
   <title>Contact Form</title>
 </head>
 <body>
-  <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+  <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you" method="POST" hidden>
     <input type="hidden" name="form-name" value="contact" />
     <p>
       <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -22,7 +22,7 @@
       <label>Message: <textarea name="message"></textarea></label>
     </p>
     <p>
-      <label>Attachment: <input type="file" name="attachment" /></label>
+      <label>Attachment: <input type="file" name="attachment" multiple /></label>
     </p>
   </form>
 </body>
