@@ -273,9 +273,6 @@ export default function Home() {
                   className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">
-                Comprehensive Assessment
-              </h3>
               <p className="text-gray-600 leading-relaxed text-center">
                 A Board Certified Behavior Analyst (BCBA) conducts a comprehensive behavioral assessment and creates an individualized treatment plan.
               </p>
@@ -291,9 +288,6 @@ export default function Home() {
                   className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">
-                In-Home Therapy
-              </h3>
               <p className="text-gray-600 leading-relaxed text-center">
                 Individualized therapy programs conducted in the comfort of home creates an approach utilizing the most natural environment allowing faster generalization and realistic outcomes.
               </p>
@@ -309,9 +303,6 @@ export default function Home() {
                   className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">
-                Caregiver Guidance
-              </h3>
               <p className="text-gray-600 leading-relaxed text-center">
                 Caregiver input and training are crucial elements of the therapeutic process.
               </p>
@@ -327,9 +318,6 @@ export default function Home() {
                   className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">
-                Consultation
-              </h3>
               <p className="text-gray-600 leading-relaxed text-center">
                 Consultation services for families, educators, businesses, or clinicians are available.
               </p>
@@ -345,9 +333,6 @@ export default function Home() {
                   className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">
-                School/Daycare Support
-              </h3>
               <p className="text-gray-600 leading-relaxed text-center">
                 We partner with the student's school or daycare to develop and implement effective programs to support learning.
               </p>
@@ -363,9 +348,6 @@ export default function Home() {
                   className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">
-                Interventions
-              </h3>
               <p className="text-gray-600 leading-relaxed text-center">
                 Interventions include communication, behavior support, social skills, toileting, hygiene, safety, daily living skills, and more.
               </p>
