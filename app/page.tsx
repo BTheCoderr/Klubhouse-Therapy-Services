@@ -411,27 +411,60 @@ export default function Home() {
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 className="space-y-6"
-                action="/thank-you"
                 method="POST"
                 onSubmit={async (e) => {
                   e.preventDefault();
                   const form = e.target as HTMLFormElement;
                   const formData = new FormData(form);
                   
-                  try {
-                    const response = await fetch('/', {
-                      method: 'POST',
-                      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                      body: new URLSearchParams(formData as any).toString()
+                  // Convert FormData to URLSearchParams for Netlify
+                  const params = new URLSearchParams();
+                  formData.forEach((value, key) => {
+                    if (key !== 'attachment') {
+                      params.append(key, value as string);
+                    }
+                  });
+                  
+                  // Handle file uploads separately
+                  const fileInput = form.querySelector('input[type="file"]') as HTMLInputElement;
+                  if (fileInput && fileInput.files && fileInput.files.length > 0) {
+                    // For file uploads, we need to use FormData
+                    const submitFormData = new FormData();
+                    formData.forEach((value, key) => {
+                      submitFormData.append(key, value);
                     });
                     
-                    if (response.ok) {
-                      window.location.href = '/thank-you';
-                    } else {
+                    try {
+                      const response = await fetch('/', {
+                        method: 'POST',
+                        body: submitFormData
+                      });
+                      
+                      if (response.ok || response.status === 200) {
+                        window.location.href = '/thank-you';
+                      } else {
+                        alert('There was an error submitting the form. Please try again.');
+                      }
+                    } catch (error) {
                       alert('There was an error submitting the form. Please try again.');
                     }
-                  } catch (error) {
-                    alert('There was an error submitting the form. Please try again.');
+                  } else {
+                    // No files, use URLSearchParams
+                    try {
+                      const response = await fetch('/', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: params.toString()
+                      });
+                      
+                      if (response.ok || response.status === 200) {
+                        window.location.href = '/thank-you';
+                      } else {
+                        alert('There was an error submitting the form. Please try again.');
+                      }
+                    } catch (error) {
+                      alert('There was an error submitting the form. Please try again.');
+                    }
                   }
                 }}
               >

@@ -8,15 +8,19 @@
 [functions]
   external_node_modules = ["sharp"]
 
-# Form handling
+# Force form processing
 [build.environment]
   NETLIFY_FORMS_DETECT = "true"
 
-# Form notifications
+# Form handling
 [[forms]]
   name = "contact"
   
   [[forms.notifications]]
   type = "email"
   event = "submission"
-  to = "admin@klubhousetherapyservices.com" 
+  to = "admin@klubhousetherapyservices.com"
+
+# Additional form settings
+[forms]
+  spam_protection = true 
