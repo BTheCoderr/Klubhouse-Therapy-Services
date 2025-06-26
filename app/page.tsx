@@ -460,10 +460,22 @@ export default function Home() {
 
                 <div className="text-left">
                   <label className="text-sm text-gray-600 cursor-pointer hover:text-klubhouse-gold transition-colors">
-                    <input type="file" className="mr-2" name="attachment" />
+                    <input 
+                      type="file" 
+                      className="mr-2" 
+                      name="attachment" 
+                      multiple
+                      onChange={(e) => {
+                        const count = e.target.files?.length || 0;
+                        const countElement = e.target.parentElement?.nextElementSibling as HTMLElement;
+                        if (countElement) {
+                          countElement.textContent = `Attachments (${count})`;
+                        }
+                      }}
+                    />
                     Attach Files
                   </label>
-                  <p className="text-sm text-gray-500 mt-1">Attachments (0)</p>
+                  <p className="text-sm text-gray-500 mt-1" id="attachment-count">Attachments (0)</p>
                 </div>
 
                 <button
@@ -473,10 +485,6 @@ export default function Home() {
                   Send Message
                 </button>
               </form>
-            </div>
-            
-            <div className="mt-8 text-sm text-gray-500 text-center">
-              This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
             </div>
           </div>
         </div>
