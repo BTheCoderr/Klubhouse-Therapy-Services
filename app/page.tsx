@@ -146,7 +146,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-light text-gray-800 mb-6">Mission Statement</h2>
-            <h3 className="text-3xl text-klubhouse-gold font-medium mb-8">Heart & Home, Together</h3>
+            <h3 className="text-3xl text-klubhouse-gold font-medium mb-8">Heart & Home Together</h3>
             <div className="w-24 h-1 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent mx-auto rounded-full"></div>
           </div>
           
