@@ -58,12 +58,12 @@ export default function ThankYou() {
                   <span className="text-klubhouse-gold font-medium"> 24 hours</span>.
                 </p>
                 
-                <p className="text-lg text-gray-600 font-light max-w-md leading-relaxed">
-                  For immediate assistance, please call us at 
-                  <a href="tel:404-838-7010" className="text-klubhouse-accent font-medium hover:underline">
-                    404-838-7010
-                  </a>
-                </p>
+                                 <p className="text-lg text-gray-600 font-light max-w-md leading-relaxed">
+                   For immediate assistance, please call us at{' '}
+                   <a href="tel:404-838-7010" className="text-klubhouse-accent font-medium hover:underline">
+                     404-838-7010
+                   </a>
+                 </p>
               </div>
               
               {/* Call to Action Buttons */}
