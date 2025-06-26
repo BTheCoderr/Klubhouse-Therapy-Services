@@ -406,20 +406,72 @@ export default function Home() {
           
           <div className="max-w-2xl mx-auto">
             <div className="bg-gray-50 p-8 rounded-2xl shadow-lg">
-              <div className="text-center">
-                <a 
-                  href="/contact-form.html"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent text-klubhouse-black font-semibold rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300"
-                >
-                  Open Contact Form
-                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </a>
-                <p className="text-sm text-gray-600 mt-4">
-                  Click above to access our contact form
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                action="/thank-you"
+                className="space-y-6"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                
+                <p className="hidden">
+                  <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                 </p>
-              </div>
+
+                <div>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    required
+                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-transparent transition-all"
+                  />
+                </div>
+
+                <div>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email*"
+                    required
+                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-transparent transition-all"
+                  />
+                </div>
+
+                <div>
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone"
+                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-transparent transition-all"
+                  />
+                </div>
+
+                <div>
+                  <textarea
+                    name="message"
+                    placeholder="Notes"
+                    rows={6}
+                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-transparent resize-none transition-all"
+                  ></textarea>
+                </div>
+
+                <div className="text-left">
+                  <label className="text-sm text-gray-600 cursor-pointer hover:text-klubhouse-gold transition-colors">
+                    <input type="file" name="attachment" multiple className="mr-2" />
+                    Attach Files
+                  </label>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent text-klubhouse-black px-8 py-4 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 font-semibold text-lg"
+                >
+                  Send Message
+                </button>
+              </form>
             </div>
           </div>
         </div>
