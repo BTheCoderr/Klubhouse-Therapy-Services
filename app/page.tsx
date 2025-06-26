@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import { Header } from '../components/Header';
@@ -411,6 +413,16 @@ export default function Home() {
                 data-netlify-honeypot="bot-field"
                 action="/thank-you"
                 className="space-y-6"
+                onSubmit={(e) => {
+                  console.log('Form submitted!');
+                  const formData = new FormData(e.target as HTMLFormElement);
+                  console.log('Form data entries:');
+                  Array.from(formData.entries()).forEach(([key, value]) => {
+                    console.log(`${key}: ${value}`);
+                  });
+                  console.log('Form action:', (e.target as HTMLFormElement).action);
+                  console.log('Form method:', (e.target as HTMLFormElement).method);
+                }}
               >
                 <input type="hidden" name="form-name" value="contact" />
                 
