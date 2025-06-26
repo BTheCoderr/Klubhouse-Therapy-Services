@@ -387,6 +387,8 @@ export default function Home() {
                   <p className="text-sm text-gray-500 mt-1">Attachments (0)</p>
                 </div>
 
+                <input type="hidden" name="form-name" value="contact" />
+
                 <button
                   type="submit"
                   className="w-full bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent text-klubhouse-black px-8 py-4 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 font-semibold text-lg"
