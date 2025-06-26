@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
-import Image from 'next/image';
 
 export default function Home() {
   const services = [
@@ -186,7 +186,7 @@ export default function Home() {
                 </div>
                 <h4 className="text-xl font-semibold text-gray-800 mb-4">Personalized Support</h4>
                 <p className="text-gray-600 leading-relaxed">
-                  We provide personalized support for neurodivergent children and adolescents with autism, focusing on skill-building, communication, and social-emotional growth.
+                  We provide personalized support for neurodivergent children and adolescents diagnosed with autism, focusing on self-advocacy, communication, and social-emotional growth.
                 </p>
               </div>
 
@@ -263,16 +263,113 @@ export default function Home() {
           </div>
           
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed text-center">
-                  {service.description}
-                </p>
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="mb-6 overflow-hidden rounded-lg">
+                <Image
+                  src="/images/services/comprehensive.png"
+                  alt="Comprehensive Assessment"
+                  width={400}
+                  height={200}
+                  className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
-            ))}
+              <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">
+                Comprehensive Assessment
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-center">
+                A Board Certified Behavior Analyst (BCBA) conducts a comprehensive behavioral assessment and creates an individualized treatment plan.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="mb-6 overflow-hidden rounded-lg">
+                <Image
+                  src="/images/services/in-hometherapy.png"
+                  alt="In-Home Therapy"
+                  width={400}
+                  height={200}
+                  className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">
+                In-Home Therapy
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-center">
+                Individualized therapy programs conducted in the comfort of home creates an approach utilizing the most natural environment allowing faster generalization and realistic outcomes.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="mb-6 overflow-hidden rounded-lg">
+                <Image
+                  src="/images/services/caregiverguidance.png"
+                  alt="Caregiver Guidance"
+                  width={400}
+                  height={200}
+                  className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">
+                Caregiver Guidance
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-center">
+                Caregiver input and training are crucial elements of the therapeutic process.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="mb-6 overflow-hidden rounded-lg">
+                <Image
+                  src="/images/services/consultation.png"
+                  alt="Consultation"
+                  width={400}
+                  height={200}
+                  className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">
+                Consultation
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-center">
+                Consultation services for families, educators, businesses, or clinicians are available.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="mb-6 overflow-hidden rounded-lg">
+                <Image
+                  src="/images/services/schoolsupport.png"
+                  alt="School/Daycare Support"
+                  width={400}
+                  height={200}
+                  className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">
+                School/Daycare Support
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-center">
+                We partner with the student's school or daycare to develop and implement effective programs to support learning.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="mb-6 overflow-hidden rounded-lg">
+                <Image
+                  src="/images/services/interventions.png"
+                  alt="Interventions"
+                  width={400}
+                  height={200}
+                  className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">
+                Interventions
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-center">
+                Interventions include communication, behavior support, social skills, toileting, hygiene, safety, daily living skills, and more.
+              </p>
+            </div>
           </div>
         </div>
       </section>
