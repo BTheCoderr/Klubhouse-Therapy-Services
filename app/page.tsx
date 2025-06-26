@@ -31,6 +31,34 @@ export default function Home() {
     }
   ];
 
+  const chrisValues = [
+    {
+      letter: 'C',
+      word: 'Compassion',
+      description: 'We approach every family with understanding, empathy, and genuine care for their unique journey.'
+    },
+    {
+      letter: 'H',
+      word: 'Hope',
+      description: 'We believe in every child\'s potential and work to inspire confidence in families as they navigate their path forward.'
+    },
+    {
+      letter: 'R',
+      word: 'Respect',
+      description: 'We honor each child\'s individuality, family values, and cultural background in everything we do.'
+    },
+    {
+      letter: 'I',
+      word: 'Inclusion',
+      description: 'We create welcoming spaces where every child and family feels valued, accepted, and celebrated.'
+    },
+    {
+      letter: 'S',
+      word: 'Support',
+      description: 'We stand alongside families, providing guidance, resources, and encouragement every step of the way.'
+    }
+  ];
+
   const insuranceLogos = [
     { name: 'Blue Cross Blue Shield', src: '/insurance/bcbs.png' },
     { name: 'Peach State Health Plan', src: '/insurance/peachstate.png' },
@@ -92,9 +120,10 @@ export default function Home() {
               </div>
               
               <p className="text-xl md:text-2xl text-gray-600 font-light max-w-md leading-relaxed">
-                Empowering families through 
-                <span className="text-klubhouse-gold font-medium"> compassionate</span> and 
-                <span className="text-klubhouse-accent font-medium"> specialized</span> care
+                At Klubhouse Therapy Services, 
+                <span className="text-klubhouse-gold font-medium"> CHRIS</span> means 
+                <span className="text-klubhouse-accent font-medium"> Compassion</span> and 
+                <span className="text-klubhouse-gold font-medium"> Care</span> at Home.
               </p>
               
               {/* Call to Action */}
@@ -114,22 +143,51 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Us Section */}
-      <section className="py-20 bg-white" id="about">
+      {/* Mission Statement Section */}
+      <section className="py-20 bg-gradient-to-r from-klubhouse-gold/10 via-white to-klubhouse-accent/10" id="mission">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-light text-gray-800 mb-6">About Us</h2>
-            <h3 className="text-2xl text-gray-600 font-light">Specialized Care for Empowering Futures</h3>
+            <h2 className="text-5xl font-light text-gray-800 mb-6">Mission Statement</h2>
+            <h3 className="text-3xl text-klubhouse-gold font-medium mb-8">Heart & Home, Together</h3>
+            <div className="w-24 h-1 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-2xl text-gray-700 leading-relaxed font-light">
+              At <span className="text-klubhouse-gold font-medium">Klubhouse Therapy Services</span>, we bring playful, personalized ABA care home—with heart. We believe every child shines brightest in a space that honors who they are, where they come from, and the unique story their family shares. Together, we grow skills, confidence, and joy—one step at a time.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* C.H.R.I.S. Values Section */}
+      <section className="py-20 bg-white" id="values">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-light text-gray-800 mb-6">Our Values</h2>
+            <h3 className="text-2xl text-gray-600 font-light mb-4">C.H.R.I.S.</h3>
+            <p className="text-xl text-gray-600">Compassion, Hope, Respect, Inclusion, Support</p>
             <div className="w-24 h-1 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent mx-auto mt-6 rounded-full"></div>
           </div>
           
-          <div className="max-w-4xl mx-auto text-gray-700 leading-relaxed space-y-8 text-center">
-            <p className="text-xl leading-relaxed">
-              At Klubhouse Therapy Services, our mission is to empower individuals and families through compassionate, specialized care. We provide tailored ABA therapy for neurodivergent children and adolescents that have an autism diagnosis. Our focus is on building essential life skills, communication, and social development.
-            </p>
-            <p className="text-xl leading-relaxed">
-              We are a clinician-owned practice that embraces diversity and complexity, offering personalized treatment for those who may require specific expertise. We aim for a deep understanding of each patient's unique needs to provide individualized tools and support for significantly improving quality of life.
-            </p>
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+            {chrisValues.map((value, index) => (
+              <div key={index} className="text-center group">
+                <div className="relative mb-6">
+                  <div className="w-20 h-20 mx-auto bg-gradient-to-br from-klubhouse-gold to-klubhouse-accent rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                    <span className="text-3xl font-bold text-klubhouse-black">
+                      {value.letter}
+                    </span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                  {value.word}
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  {value.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
