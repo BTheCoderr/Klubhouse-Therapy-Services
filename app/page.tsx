@@ -160,6 +160,70 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About Us Section */}
+      <section className="py-20 bg-white" id="about">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <span className="text-4xl">🧩</span>
+              <h2 className="text-5xl font-light text-gray-800">About Us</h2>
+            </div>
+            <h3 className="text-3xl text-klubhouse-gold font-medium mb-8">Specialized ABA Care That Puts the Pieces Together</h3>
+            <div className="w-24 h-1 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="max-w-5xl mx-auto space-y-12">
+            {/* Main About Content */}
+            <div className="text-center">
+              <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                At <span className="text-klubhouse-gold font-medium">Klubhouse Therapy Services</span>, we empower children and families by bringing heart-centered, specialized ABA care into the places where kids thrive most — their homes, schools, and communities.
+              </p>
+            </div>
+
+            {/* Three Key Points */}
+            <div className="grid md:grid-cols-3 gap-8 mt-16">
+              <div className="text-center group">
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-klubhouse-gold to-klubhouse-accent rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                  <span className="text-2xl">🏠</span>
+                </div>
+                <h4 className="text-xl font-semibold text-gray-800 mb-4">Personalized Support</h4>
+                <p className="text-gray-600 leading-relaxed">
+                  We provide personalized support for neurodivergent children and adolescents with autism, focusing on skill-building, communication, and social-emotional growth.
+                </p>
+              </div>
+
+              <div className="text-center group">
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-klubhouse-gold to-klubhouse-accent rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                  <span className="text-2xl">🎯</span>
+                </div>
+                <h4 className="text-xl font-semibold text-gray-800 mb-4">Child-Centered Approach</h4>
+                <p className="text-gray-600 leading-relaxed">
+                  Every care plan is crafted to fit the child, not the other way around. We meet children where they are and help them grow at their own pace.
+                </p>
+              </div>
+
+              <div className="text-center group">
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-klubhouse-gold to-klubhouse-accent rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                  <span className="text-2xl">👨‍⚕️</span>
+                </div>
+                <h4 className="text-xl font-semibold text-gray-800 mb-4">Clinician-Owned Practice</h4>
+                <p className="text-gray-600 leading-relaxed">
+                  As a clinician-owned practice, we celebrate each family's unique story with cultural sensitivity, clinical expertise, and deep commitment.
+                </p>
+              </div>
+            </div>
+
+            {/* Closing Statement */}
+            <div className="text-center mt-16 bg-gradient-to-r from-klubhouse-gold/5 via-white to-klubhouse-accent/5 p-8 rounded-2xl">
+              <p className="text-xl text-gray-700 leading-relaxed font-light">
+                Our team brings cultural sensitivity, clinical expertise, and a deep commitment to meeting children where they are — with tools that help them 
+                <span className="text-klubhouse-gold font-medium"> shine brighter</span>, step by step.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* C.H.R.I.S. Values Section */}
       <section className="py-20 bg-white" id="values">
         <div className="container mx-auto px-4">
