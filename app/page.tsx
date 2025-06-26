@@ -285,7 +285,7 @@ export default function Home() {
             <div className="w-24 h-1 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent mx-auto rounded-full"></div>
           </div>
           
-          <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-8">
             {insuranceLogos.map((logo, index) => (
               <div key={index} className="flex items-center justify-center p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 min-h-[120px]">
                 <Image
@@ -334,7 +334,6 @@ export default function Home() {
                 method="POST"
               >
                 <input type="hidden" name="form-name" value="contact" />
-                <input type="hidden" name="email-to" value="admin@klubhousetherapyservices.com" />
                 
                 {/* Honeypot field */}
                 <p className="hidden">

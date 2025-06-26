@@ -4,13 +4,26 @@
   <title>Contact Form</title>
 </head>
 <body>
-  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-    <input type="hidden" name="email-to" value="admin@klubhousetherapyservices.com" />
-    <input type="text" name="name" />
-    <input type="email" name="email" />
-    <input type="tel" name="phone" />
-    <textarea name="message"></textarea>
-    <input type="file" name="attachment" />
+  <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact" />
+    <p>
+      <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+    </p>
+    <p>
+      <label>Name: <input type="text" name="name" /></label>
+    </p>
+    <p>
+      <label>Email: <input type="email" name="email" required /></label>
+    </p>
+    <p>
+      <label>Phone: <input type="tel" name="phone" /></label>
+    </p>
+    <p>
+      <label>Message: <textarea name="message"></textarea></label>
+    </p>
+    <p>
+      <label>Attachment: <input type="file" name="attachment" /></label>
+    </p>
   </form>
 </body>
 </html> 
