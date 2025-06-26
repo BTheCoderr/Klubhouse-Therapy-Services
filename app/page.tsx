@@ -44,45 +44,90 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
+      {/* Header with Centered Phone */}
+      <header className="bg-white py-6 shadow-sm">
+        <div className="container mx-auto px-4 text-center">
+          <a 
+            href="tel:404-838-7010" 
+            className="text-2xl md:text-3xl text-klubhouse-black font-semibold hover:text-klubhouse-accent transition-all duration-300 hover:scale-105 inline-block"
+          >
+            404-838-7010
+          </a>
+        </div>
+      </header>
       
-      {/* Hero Section with Logo */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-16 max-w-6xl mx-auto">
-            {/* Large Logo */}
-            <div className="flex-shrink-0">
-              <Image
-                src="/images/logo-large.png"
-                alt="Klubhouse Therapy Services"
-                width={400}
-                height={400}
-                className="w-80 h-80 lg:w-96 lg:h-96 object-contain"
-                priority
-              />
+      {/* Amazing Hero Section */}
+      <section className="py-20 md:py-32 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-klubhouse-gold rounded-full"></div>
+          <div className="absolute bottom-20 right-10 w-24 h-24 bg-klubhouse-accent rounded-full"></div>
+          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-klubhouse-gold rounded-full"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-24 max-w-7xl mx-auto">
+            {/* Large Logo with Enhanced Styling */}
+            <div className="flex-shrink-0 relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-klubhouse-gold/20 to-klubhouse-accent/20 rounded-3xl blur-xl"></div>
+              <div className="relative bg-white rounded-2xl p-8 shadow-2xl border border-gray-100">
+                <Image
+                  src="/images/logo-large.png"
+                  alt="Klubhouse Therapy Services"
+                  width={500}
+                  height={500}
+                  className="w-80 h-80 lg:w-[28rem] lg:h-[28rem] object-contain drop-shadow-lg"
+                  priority
+                />
+              </div>
             </div>
             
-            {/* Welcome Text */}
-            <div className="text-center lg:text-left">
-              <h1 className="text-6xl lg:text-8xl font-light text-gray-800 tracking-wide">
-                WELCOME
-              </h1>
+            {/* Welcome Text with Amazing Typography */}
+            <div className="text-center lg:text-left space-y-8">
+              <div className="space-y-4">
+                <h1 className="text-7xl md:text-8xl lg:text-9xl font-extralight text-gray-800 tracking-wider leading-none">
+                  WELCOME
+                </h1>
+                <div className="w-32 h-1 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent mx-auto lg:mx-0 rounded-full"></div>
+              </div>
+              
+              <p className="text-xl md:text-2xl text-gray-600 font-light max-w-md leading-relaxed">
+                Empowering families through 
+                <span className="text-klubhouse-gold font-medium"> compassionate</span> and 
+                <span className="text-klubhouse-accent font-medium"> specialized</span> care
+              </p>
+              
+              {/* Call to Action */}
+              <div className="pt-6">
+                <a 
+                  href="#contact" 
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent text-klubhouse-black font-semibold rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300 group"
+                >
+                  Get Started Today
+                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* About Us Section */}
-      <section className="py-16 bg-white" id="about">
+      <section className="py-20 bg-white" id="about">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-light text-gray-800 mb-4 text-center">About Us</h2>
-          <h3 className="text-xl text-gray-600 mb-12 text-center font-light">Specialized Care for Empowering Futures</h3>
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-light text-gray-800 mb-6">About Us</h2>
+            <h3 className="text-2xl text-gray-600 font-light">Specialized Care for Empowering Futures</h3>
+            <div className="w-24 h-1 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent mx-auto mt-6 rounded-full"></div>
+          </div>
           
-          <div className="max-w-4xl mx-auto text-gray-700 leading-relaxed space-y-6 text-center">
-            <p className="text-lg">
+          <div className="max-w-4xl mx-auto text-gray-700 leading-relaxed space-y-8 text-center">
+            <p className="text-xl leading-relaxed">
               At Klubhouse Therapy Services, our mission is to empower individuals and families through compassionate, specialized care. We provide tailored ABA therapy for neurodivergent children and adolescents that have an autism diagnosis. Our focus is on building essential life skills, communication, and social development.
             </p>
-            <p className="text-lg">
+            <p className="text-xl leading-relaxed">
               We are a clinician-owned practice that embraces diversity and complexity, offering personalized treatment for those who may require specific expertise. We aim for a deep understanding of each patient's unique needs to provide individualized tools and support for significantly improving quality of life.
             </p>
           </div>
@@ -90,14 +135,17 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-white" id="services">
+      <section className="py-20 bg-gray-50" id="services">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-light text-gray-800 mb-12 text-center">Our Services</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-light text-gray-800 mb-6">Our Services</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent mx-auto rounded-full"></div>
+          </div>
           
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg">
-                <h3 className="text-xl font-medium text-gray-800 mb-4 text-center">
+              <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+                <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-center">
@@ -110,19 +158,22 @@ export default function Home() {
       </section>
 
       {/* Insurance Section */}
-      <section className="py-16 bg-white" id="insurance">
+      <section className="py-20 bg-white" id="insurance">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-light text-gray-800 mb-12 text-center">Accepted Insurance</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-light text-gray-800 mb-6">Accepted Insurance</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent mx-auto rounded-full"></div>
+          </div>
           
           <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
             {insuranceLogos.map((logo, index) => (
-              <div key={index} className="flex items-center justify-center p-4 min-h-[100px]">
+              <div key={index} className="flex items-center justify-center p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 min-h-[120px]">
                 <Image
                   src={logo.src}
                   alt={logo.name}
                   width={150}
                   height={75}
-                  className="object-contain w-full h-auto max-w-[150px]"
+                  className="object-contain w-full h-auto max-w-[150px] filter grayscale hover:grayscale-0 transition-all duration-300"
                 />
               </div>
             ))}
@@ -131,90 +182,100 @@ export default function Home() {
       </section>
 
       {/* Sign Up Section */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-light text-gray-800 mb-8">Sign Up for ABA Services</h2>
-          <p className="text-2xl text-gray-600 mb-8">404-838-7010</p>
+          <h2 className="text-5xl font-light text-klubhouse-black mb-8">Sign Up for ABA Services</h2>
+          <a 
+            href="tel:404-838-7010"
+            className="inline-block text-3xl md:text-4xl text-klubhouse-black font-bold hover:scale-105 transition-transform duration-300 bg-white px-8 py-4 rounded-full shadow-lg"
+          >
+            404-838-7010
+          </a>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-white" id="contact">
+      <section className="py-20 bg-white" id="contact">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-light text-gray-800 mb-4 text-center">Contact Us</h2>
-          <h3 className="text-xl text-gray-600 mb-12 text-center font-light">Learn more about how Klubhouse Therapy Services can support your family:</h3>
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-light text-gray-800 mb-6">Contact Us</h2>
+            <h3 className="text-xl text-gray-600 font-light">Learn more about how Klubhouse Therapy Services can support your family:</h3>
+            <div className="w-24 h-1 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent mx-auto mt-6 rounded-full"></div>
+          </div>
           
           <div className="max-w-2xl mx-auto">
-            <form 
-              name="contact" 
-              data-netlify="true" 
-              data-netlify-honeypot="bot-field"
-              className="space-y-6"
-              action="/thank-you"
-              method="POST"
-            >
-              <input type="hidden" name="form-name" value="contact" />
-              <input type="hidden" name="email-to" value="admin@klubhousetherapyservices.com" />
-              
-              {/* Honeypot field */}
-              <p className="hidden">
-                <label>
-                  Don't fill this out if you're human: <input name="bot-field" />
-                </label>
-              </p>
-
-              <div>
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full p-4 border border-gray-300 rounded focus:outline-none focus:border-gray-500"
-                  name="name"
-                />
-              </div>
-
-              <div>
-                <input
-                  type="email"
-                  placeholder="Email*"
-                  required
-                  className="w-full p-4 border border-gray-300 rounded focus:outline-none focus:border-gray-500"
-                  name="email"
-                />
-              </div>
-
-              <div>
-                <input
-                  type="tel"
-                  placeholder="Phone"
-                  className="w-full p-4 border border-gray-300 rounded focus:outline-none focus:border-gray-500"
-                  name="phone"
-                />
-              </div>
-
-              <div>
-                <textarea
-                  name="message"
-                  placeholder="Notes"
-                  rows={6}
-                  className="w-full p-4 border border-gray-300 rounded focus:outline-none focus:border-gray-500 resize-none"
-                ></textarea>
-              </div>
-
-              <div className="text-left">
-                <label className="text-sm text-gray-600">
-                  <input type="file" className="mr-2" name="attachment" />
-                  Attach Files
-                </label>
-                <p className="text-sm text-gray-500 mt-1">Attachments (0)</p>
-              </div>
-
-              <button
-                type="submit"
-                className="bg-klubhouse-gold text-klubhouse-black px-8 py-3 rounded hover:bg-klubhouse-accent transition-colors font-medium"
+            <div className="bg-gray-50 p-8 rounded-2xl shadow-lg">
+              <form 
+                name="contact" 
+                data-netlify="true" 
+                data-netlify-honeypot="bot-field"
+                className="space-y-6"
+                action="/thank-you"
+                method="POST"
               >
-                Send
-              </button>
-            </form>
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="email-to" value="admin@klubhousetherapyservices.com" />
+                
+                {/* Honeypot field */}
+                <p className="hidden">
+                  <label>
+                    Don't fill this out if you're human: <input name="bot-field" />
+                  </label>
+                </p>
+
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-transparent transition-all"
+                    name="name"
+                  />
+                </div>
+
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Email*"
+                    required
+                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-transparent transition-all"
+                    name="email"
+                  />
+                </div>
+
+                <div>
+                  <input
+                    type="tel"
+                    placeholder="Phone"
+                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-transparent transition-all"
+                    name="phone"
+                  />
+                </div>
+
+                <div>
+                  <textarea
+                    name="message"
+                    placeholder="Notes"
+                    rows={6}
+                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-transparent resize-none transition-all"
+                  ></textarea>
+                </div>
+
+                <div className="text-left">
+                  <label className="text-sm text-gray-600 cursor-pointer hover:text-klubhouse-gold transition-colors">
+                    <input type="file" className="mr-2" name="attachment" />
+                    Attach Files
+                  </label>
+                  <p className="text-sm text-gray-500 mt-1">Attachments (0)</p>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent text-klubhouse-black px-8 py-4 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 font-semibold text-lg"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
             
             <div className="mt-8 text-sm text-gray-500 text-center">
               This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
