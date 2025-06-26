@@ -12,15 +12,4 @@
 [build.environment]
   NETLIFY_FORMS_DETECT = "true"
 
-# Form handling
-[[forms]]
-  name = "contact"
-  
-  [[forms.notifications]]
-  type = "email"
-  event = "submission"
-  to = "admin@klubhousetherapyservices.com"
-
-# Additional form settings
-[forms]
-  spam_protection = true 
+# Form settings will be handled by Netlify's automatic detection 
