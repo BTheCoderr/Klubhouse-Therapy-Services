@@ -406,140 +406,20 @@ export default function Home() {
           
           <div className="max-w-2xl mx-auto">
             <div className="bg-gray-50 p-8 rounded-2xl shadow-lg">
-              <form
-                name="contact"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                className="space-y-6"
-                method="POST"
-                onSubmit={async (e) => {
-                  e.preventDefault();
-                  const form = e.target as HTMLFormElement;
-                  const formData = new FormData(form);
-                  
-                  // Convert FormData to URLSearchParams for Netlify
-                  const params = new URLSearchParams();
-                  formData.forEach((value, key) => {
-                    if (key !== 'attachment') {
-                      params.append(key, value as string);
-                    }
-                  });
-                  
-                  // Handle file uploads separately
-                  const fileInput = form.querySelector('input[type="file"]') as HTMLInputElement;
-                  if (fileInput && fileInput.files && fileInput.files.length > 0) {
-                    // For file uploads, we need to use FormData
-                    const submitFormData = new FormData();
-                    formData.forEach((value, key) => {
-                      submitFormData.append(key, value);
-                    });
-                    
-                    try {
-                      const response = await fetch('/', {
-                        method: 'POST',
-                        body: submitFormData
-                      });
-                      
-                      if (response.ok || response.status === 200) {
-                        window.location.href = '/thank-you';
-                      } else {
-                        alert('There was an error submitting the form. Please try again.');
-                      }
-                    } catch (error) {
-                      alert('There was an error submitting the form. Please try again.');
-                    }
-                  } else {
-                    // No files, use URLSearchParams
-                    try {
-                      const response = await fetch('/', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                        body: params.toString()
-                      });
-                      
-                      if (response.ok || response.status === 200) {
-                        window.location.href = '/thank-you';
-                      } else {
-                        alert('There was an error submitting the form. Please try again.');
-                      }
-                    } catch (error) {
-                      alert('There was an error submitting the form. Please try again.');
-                    }
-                  }
-                }}
-              >
-                <input type="hidden" name="form-name" value="contact" />
-                
-                <p className="hidden">
-                  <label>
-                    Don't fill this out if you're human: <input name="bot-field" />
-                  </label>
-                </p>
-
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-transparent transition-all"
-                    name="name"
-                  />
-                </div>
-
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Email*"
-                    required
-                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-transparent transition-all"
-                    name="email"
-                  />
-                </div>
-
-                <div>
-                  <input
-                    type="tel"
-                    placeholder="Phone"
-                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-transparent transition-all"
-                    name="phone"
-                  />
-                </div>
-
-                <div>
-                  <textarea
-                    name="message"
-                    placeholder="Notes"
-                    rows={6}
-                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-transparent resize-none transition-all"
-                  ></textarea>
-                </div>
-
-                <div className="text-left">
-                  <label className="text-sm text-gray-600 cursor-pointer hover:text-klubhouse-gold transition-colors">
-                    <input 
-                      type="file" 
-                      className="mr-2" 
-                      name="attachment" 
-                      multiple
-                      onChange={(e) => {
-                        const count = e.target.files?.length || 0;
-                        const countElement = e.target.parentElement?.nextElementSibling as HTMLElement;
-                        if (countElement) {
-                          countElement.textContent = `Attachments (${count})`;
-                        }
-                      }}
-                    />
-                    Attach Files
-                  </label>
-                  <p className="text-sm text-gray-500 mt-1" id="attachment-count">Attachments (0)</p>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent text-klubhouse-black px-8 py-4 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 font-semibold text-lg"
+              <div className="text-center">
+                <a 
+                  href="/contact-form.html"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent text-klubhouse-black font-semibold rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300"
                 >
-                  Send Message
-                </button>
-              </form>
+                  Open Contact Form
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </a>
+                <p className="text-sm text-gray-600 mt-4">
+                  Click above to access our contact form
+                </p>
+              </div>
             </div>
           </div>
         </div>
