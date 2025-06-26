@@ -65,9 +65,7 @@ export default function Home() {
     { name: 'Amerigroup', src: '/insurance/amerigroup.png' },
     { name: 'CareSource', src: '/insurance/caresource.png' },
     { name: 'Aetna', src: '/insurance/aetna.png' },
-    { name: 'Georgia Medicaid', src: '/insurance/medicaid.png' },
-    { name: 'Humana Military TRICARE', src: '/insurance/humana.png' },
-    { name: 'Cigna', src: '/insurance/cigna.png' }
+    { name: 'Georgia Medicaid', src: '/insurance/medicaid.png' }
   ];
 
   return (
@@ -384,11 +382,20 @@ export default function Home() {
 
                 <div className="text-left">
                   <label className="text-sm text-gray-600 cursor-pointer hover:text-klubhouse-gold transition-colors">
-                    <input type="file" className="mr-2" name="attachment" />
+                    <input type="file" className="mr-2" name="attachment" id="file-input" />
                     Attach Files
                   </label>
-                  <p className="text-sm text-gray-500 mt-1">Attachments (0)</p>
+                  <p className="text-sm text-gray-500 mt-1" id="file-count">Attachments (0)</p>
                 </div>
+
+                <script dangerouslySetInnerHTML={{
+                  __html: `
+                    document.getElementById('file-input').addEventListener('change', function(e) {
+                      const fileCount = e.target.files.length;
+                      document.getElementById('file-count').textContent = 'Attachments (' + fileCount + ')';
+                    });
+                  `
+                }} />
 
                 <button
                   type="submit"
