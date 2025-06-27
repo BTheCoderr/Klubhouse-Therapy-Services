@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import { Header } from '../components/Header';
@@ -405,18 +407,35 @@ export default function Home() {
           <div className="max-w-2xl mx-auto">
             <div className="bg-gray-50 p-8 rounded-2xl shadow-lg">
               <form
-                name="contact"
-                method="POST"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                action="/"
+                onSubmit={async (e) => {
+                  e.preventDefault();
+                  const formData = new FormData(e.target as HTMLFormElement);
+                  const data = {
+                    name: formData.get('name') as string,
+                    email: formData.get('email') as string,
+                    phone: formData.get('phone') as string,
+                    message: formData.get('message') as string,
+                  };
+                  
+                  try {
+                    const response = await fetch('/api/send-email', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify(data),
+                    });
+                    
+                    if (response.ok) {
+                      alert('Message sent successfully! We\'ll get back to you within 24 hours.');
+                      (e.target as HTMLFormElement).reset();
+                    } else {
+                      throw new Error('Failed to send message');
+                    }
+                  } catch (error) {
+                    alert('Sorry, there was an error sending your message. Please call us at 404-838-7010.');
+                  }
+                }}
                 className="space-y-6"
               >
-                <input type="hidden" name="form-name" value="contact" />
-                
-                <p className="hidden">
-                  <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                </p>
 
                 <div>
                   <input
@@ -452,16 +471,12 @@ export default function Home() {
                     name="message"
                     placeholder="Notes"
                     rows={6}
+                    required
                     className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-transparent resize-none transition-all"
                   ></textarea>
                 </div>
 
-                <div className="text-left">
-                  <label className="text-sm text-gray-600 cursor-pointer hover:text-klubhouse-gold transition-colors">
-                    <input type="file" name="attachment" multiple className="mr-2" />
-                    Attach Files
-                  </label>
-                </div>
+
 
                 <button
                   type="submit"
