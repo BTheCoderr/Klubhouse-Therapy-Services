@@ -12,4 +12,27 @@
 [build.environment]
   NETLIFY_FORMS_DETECT = "true"
 
-# Form settings will be handled by Netlify's automatic detection 
+# Explicit form configuration
+[[forms]]
+  name = "contact"
+  action = "/thank-you"
+  
+  [[forms.fields]]
+    name = "name"
+    type = "text"
+    
+  [[forms.fields]]
+    name = "email" 
+    type = "email"
+    
+  [[forms.fields]]
+    name = "phone"
+    type = "tel"
+    
+  [[forms.fields]]
+    name = "message"
+    type = "textarea"
+    
+  [[forms.fields]]
+    name = "attachment"
+    type = "file" 
