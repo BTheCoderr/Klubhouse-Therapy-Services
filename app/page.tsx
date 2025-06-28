@@ -375,6 +375,7 @@ export default function Home() {
                   width={150}
                   height={75}
                   className="object-contain w-full h-auto max-w-[150px] filter grayscale hover:grayscale-0 transition-all duration-300"
+                  style={{ width: 'auto', height: 'auto' }}
                 />
               </div>
             ))}
@@ -409,29 +410,56 @@ export default function Home() {
               <form
                 onSubmit={async (e) => {
                   e.preventDefault();
+                  const form = e.target as HTMLFormElement;
+                  const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+                  const originalText = submitButton.textContent;
+                  
+                  // Show loading state
+                  submitButton.textContent = 'Sending...';
+                  submitButton.disabled = true;
+                  
                   const formData = new FormData(e.target as HTMLFormElement);
-                  const data = {
-                    name: formData.get('name') as string,
-                    email: formData.get('email') as string,
-                    phone: formData.get('phone') as string,
-                    message: formData.get('message') as string,
-                  };
+                  
+                  // Validate file attachments
+                  const files = formData.getAll('attachments') as File[];
+                  const validFiles = files.filter(file => file.size > 0);
+                  
+                  if (validFiles.length > 5) {
+                    alert('❌ Maximum 5 files allowed. Please remove some files and try again.');
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
+                    return;
+                  }
+                  
+                  for (const file of validFiles) {
+                    if (file.size > 10 * 1024 * 1024) { // 10MB limit
+                      alert(`❌ File "${file.name}" is too large. Maximum file size is 10MB.`);
+                      submitButton.textContent = originalText;
+                      submitButton.disabled = false;
+                      return;
+                    }
+                  }
                   
                   try {
                     const response = await fetch('/api/send-email', {
                       method: 'POST',
-                      headers: { 'Content-Type': 'application/json' },
-                      body: JSON.stringify(data),
+                      body: formData, // Send FormData directly
                     });
                     
                     if (response.ok) {
-                      alert('Message sent successfully! We\'ll get back to you within 24 hours.');
+                      alert('✅ Message sent successfully! We\'ll get back to you within 24 hours.');
                       (e.target as HTMLFormElement).reset();
                     } else {
-                      throw new Error('Failed to send message');
+                      const errorData = await response.json();
+                      throw new Error(errorData.error || 'Failed to send message');
                     }
                   } catch (error) {
-                    alert('Sorry, there was an error sending your message. Please call us at 404-838-7010.');
+                    console.error('Contact form error:', error);
+                    alert('❌ Sorry, there was an error sending your message. Please call us directly at 404-838-7010 or email klubhousetherapyservices@outlook.com');
+                  } finally {
+                    // Reset button state
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
                   }
                 }}
                 className="space-y-6"
@@ -476,7 +504,22 @@ export default function Home() {
                   ></textarea>
                 </div>
 
-
+                {/* File Attachment Section */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Attach Files (Optional)
+                  </label>
+                  <input
+                    type="file"
+                    name="attachments"
+                    multiple
+                    accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.gif,.txt"
+                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-transparent transition-all file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-klubhouse-gold file:text-klubhouse-black hover:file:bg-klubhouse-accent"
+                  />
+                  <p className="text-xs text-gray-500 mt-2">
+                    📎 Max 5 files, 10MB each. Supported: PDF, DOC, DOCX, JPG, PNG, GIF, TXT
+                  </p>
+                </div>
 
                 <button
                   type="submit"

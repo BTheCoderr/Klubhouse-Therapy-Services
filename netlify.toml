@@ -6,4 +6,12 @@
   package = "@netlify/plugin-nextjs"
 
 [functions]
-  external_node_modules = ["sharp"] 
+  external_node_modules = ["sharp"]
+
+# Environment variables for production
+[context.production.environment]
+  NEXT_PUBLIC_DOMAIN = "klubhousetherapyservices.com"
+
+# Environment variables for deploy previews
+[context.deploy-preview.environment]
+  NEXT_PUBLIC_DOMAIN = "klubhousetherapyservices.com" 
