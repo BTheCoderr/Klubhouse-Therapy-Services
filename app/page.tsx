@@ -397,16 +397,35 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-white" id="contact">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden" id="contact">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-klubhouse-gold rounded-full"></div>
+          <div className="absolute bottom-20 right-10 w-24 h-24 bg-klubhouse-accent rounded-full"></div>
+          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-klubhouse-gold rounded-full"></div>
+          <div className="absolute top-1/3 right-1/4 w-20 h-20 bg-klubhouse-accent rounded-full"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-light text-gray-800 mb-6">Contact Us</h2>
-            <h3 className="text-xl text-gray-600 font-light">Learn more about how Klubhouse Therapy Services can support your family:</h3>
-            <div className="w-24 h-1 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent mx-auto mt-6 rounded-full"></div>
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <span className="text-5xl">📞</span>
+              <h2 className="text-6xl font-light text-gray-800">Contact Us</h2>
+            </div>
+            <h3 className="text-2xl text-klubhouse-gold font-medium mb-4">Ready to Start Your Journey?</h3>
+            <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
+              Learn more about how <span className="text-klubhouse-gold font-medium">Klubhouse Therapy Services</span> can support your family with compassionate, personalized ABA care at home.
+            </p>
+            <div className="w-32 h-1 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent mx-auto mt-8 rounded-full"></div>
           </div>
           
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-gray-50 p-8 rounded-2xl shadow-lg">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white p-10 rounded-3xl shadow-2xl border border-gray-100 relative overflow-hidden">
+              {/* Form Background Pattern */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-klubhouse-gold/10 to-klubhouse-accent/10 rounded-full transform translate-x-16 -translate-y-16"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-klubhouse-accent/10 to-klubhouse-gold/10 rounded-full transform -translate-x-12 translate-y-12"></div>
+              
+              <div className="relative z-10">
               <form
                 onSubmit={async (e) => {
                   e.preventDefault();
@@ -465,69 +484,141 @@ export default function Home() {
                 className="space-y-6"
               >
 
-                <div>
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Name"
-                    required
-                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-transparent transition-all"
-                  />
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">👤 Full Name *</label>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Enter your full name"
+                      required
+                      className="w-full p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-klubhouse-gold transition-all duration-300 hover:border-klubhouse-accent"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">📧 Email Address *</label>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="your.email@example.com"
+                      required
+                      className="w-full p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-klubhouse-gold transition-all duration-300 hover:border-klubhouse-accent"
+                    />
+                  </div>
                 </div>
 
                 <div>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email*"
-                    required
-                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-transparent transition-all"
-                  />
-                </div>
-
-                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">📞 Phone Number</label>
                   <input
                     type="tel"
                     name="phone"
-                    placeholder="Phone"
-                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-transparent transition-all"
+                    placeholder="(404) 123-4567"
+                    className="w-full p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-klubhouse-gold transition-all duration-300 hover:border-klubhouse-accent"
                   />
                 </div>
 
                 <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">💭 Tell Us About Your Needs *</label>
                   <textarea
                     name="message"
-                    placeholder="Notes"
+                    placeholder="Please share details about your family's needs, goals, or any questions you have about our ABA services..."
                     rows={6}
                     required
-                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-transparent resize-none transition-all"
+                    className="w-full p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-klubhouse-gold resize-none transition-all duration-300 hover:border-klubhouse-accent"
                   ></textarea>
                 </div>
 
                 {/* File Attachment Section */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Attach Files (Optional)
+                <div className="bg-gradient-to-r from-klubhouse-gold/10 to-klubhouse-accent/10 p-6 rounded-xl border-2 border-dashed border-klubhouse-gold/30">
+                  <label className="block text-sm font-semibold text-gray-700 mb-3">
+                    📎 Attach Files (Optional)
                   </label>
                   <input
                     type="file"
                     name="attachments"
                     multiple
                     accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.gif,.txt"
-                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-transparent transition-all file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-klubhouse-gold file:text-klubhouse-black hover:file:bg-klubhouse-accent"
+                    className="w-full p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-klubhouse-gold transition-all duration-300 hover:border-klubhouse-accent file:mr-4 file:py-3 file:px-6 file:rounded-full file:border-0 file:text-sm file:font-bold file:bg-gradient-to-r file:from-klubhouse-gold file:to-klubhouse-accent file:text-klubhouse-black hover:file:shadow-lg file:transition-all file:duration-300"
                   />
-                  <p className="text-xs text-gray-500 mt-2">
-                    📎 Max 5 files, 10MB each. Supported: PDF, DOC, DOCX, JPG, PNG, GIF, TXT
-                  </p>
+                  <div className="mt-3 bg-white p-3 rounded-lg border border-gray-200">
+                    <p className="text-sm text-gray-600 font-medium">
+                      📋 <strong>Upload Guidelines:</strong>
+                    </p>
+                    <ul className="text-xs text-gray-500 mt-1 space-y-1">
+                      <li>• Maximum 5 files, 10MB each</li>
+                      <li>• Supported formats: PDF, DOC, DOCX, JPG, PNG, GIF, TXT</li>
+                      <li>• Perfect for reports, assessments, or relevant documents</li>
+                    </ul>
+                  </div>
                 </div>
 
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent text-klubhouse-black px-8 py-4 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 font-semibold text-lg"
-                >
-                  Send Message
-                </button>
+                {/* Submit Button */}
+                <div className="text-center pt-4">
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-klubhouse-gold via-klubhouse-accent to-purple-600 text-white px-10 py-5 rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-300 font-bold text-xl relative overflow-hidden group"
+                  >
+                    <span className="absolute inset-0 bg-gradient-to-r from-purple-600 via-klubhouse-accent to-klubhouse-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <span className="relative z-10 flex items-center justify-center gap-3">
+                      <span>🚀</span>
+                      Send Message
+                      <span>✨</span>
+                    </span>
+                  </button>
+                  <p className="text-sm text-gray-500 mt-3 font-medium">
+                    We'll respond within 24 hours with compassionate care! 💙
+                  </p>
+                </div>
               </form>
+              </div>
+            </div>
+            
+            {/* Contact Information Cards */}
+            <div className="grid md:grid-cols-2 gap-8 mt-16 max-w-4xl mx-auto">
+              {/* Phone Card */}
+              <div className="bg-gradient-to-br from-klubhouse-gold to-klubhouse-accent p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center">
+                <div className="w-16 h-16 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow-lg">
+                  <span className="text-3xl">📞</span>
+                </div>
+                <h3 className="text-xl font-bold text-klubhouse-black mb-4">Call Us Today</h3>
+                <a 
+                  href="tel:404-838-7010" 
+                  className="text-2xl font-bold text-klubhouse-black hover:scale-105 transition-transform duration-300 inline-block"
+                >
+                  404-838-7010
+                </a>
+                <p className="text-klubhouse-black mt-3 font-medium">Available for immediate assistance</p>
+              </div>
+
+              {/* Email Card */}
+              <div className="bg-gradient-to-br from-klubhouse-accent to-purple-600 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center">
+                <div className="w-16 h-16 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow-lg">
+                  <span className="text-3xl">📧</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Email Us</h3>
+                <a 
+                  href="mailto:admin@klubhousetherapyservices.com" 
+                  className="text-lg font-semibold text-klubhouse-gold hover:scale-105 transition-transform duration-300 inline-block break-all"
+                >
+                  admin@klubhousetherapyservices.com
+                </a>
+                <p className="text-white mt-3 font-medium">We'll respond within 24 hours</p>
+              </div>
+            </div>
+
+            {/* CHRIS Values Banner */}
+            <div className="mt-16 bg-gradient-to-r from-klubhouse-gold via-klubhouse-accent to-purple-600 p-8 rounded-2xl shadow-lg text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                At Klubhouse Therapy Services, <span className="text-klubhouse-black">CHRIS</span> means <span className="text-klubhouse-black">Compassion</span> and <span className="text-klubhouse-black">Care</span> at Home.
+              </h3>
+              <div className="flex flex-wrap justify-center gap-4 mt-6">
+                <span className="bg-white text-klubhouse-accent px-4 py-2 rounded-full font-semibold shadow-lg">Compassion</span>
+                <span className="bg-white text-klubhouse-accent px-4 py-2 rounded-full font-semibold shadow-lg">Hope</span>
+                <span className="bg-white text-klubhouse-accent px-4 py-2 rounded-full font-semibold shadow-lg">Respect</span>
+                <span className="bg-white text-klubhouse-accent px-4 py-2 rounded-full font-semibold shadow-lg">Inclusion</span>
+                <span className="bg-white text-klubhouse-accent px-4 py-2 rounded-full font-semibold shadow-lg">Support</span>
+              </div>
             </div>
           </div>
         </div>
