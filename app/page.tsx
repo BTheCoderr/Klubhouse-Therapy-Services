@@ -178,6 +178,40 @@ export default function Home() {
               <p className="text-xl text-gray-700 leading-relaxed mb-8">
                 At <span className="text-klubhouse-gold font-medium">Klubhouse Therapy Services</span>, we empower children and families by bringing heart-centered, specialized ABA care into the places where kids thrive most — their homes, schools, and communities.
               </p>
+              
+              {/* Meet Our BCBA */}
+              <div className="bg-gradient-to-r from-klubhouse-gold/10 to-klubhouse-accent/10 rounded-2xl p-8 mt-12 max-w-4xl mx-auto">
+                <h4 className="text-2xl font-semibold text-gray-800 mb-8 text-center">Meet Our Board Certified Behavior Analyst</h4>
+                
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                  {/* Professional Headshot */}
+                  <div className="flex-shrink-0">
+                    <div className="relative">
+                      <div className="absolute -inset-2 bg-gradient-to-r from-klubhouse-gold/30 to-klubhouse-accent/30 rounded-full blur-lg"></div>
+                      <Image
+                        src="/headshot.jpeg"
+                        alt="Alicia Paduan, MA, MS, BCBA LBA"
+                        width={200}
+                        height={200}
+                        className="relative w-48 h-48 object-cover rounded-full shadow-xl border-4 border-white"
+                      />
+                    </div>
+                  </div>
+                  
+                  {/* Credentials and Description */}
+                  <div className="text-center md:text-left flex-1">
+                    <p className="text-2xl text-gray-800 mb-2">
+                      <span className="text-klubhouse-gold font-semibold">Alicia Paduan</span>
+                    </p>
+                    <p className="text-lg text-gray-600 font-medium mb-4">
+                      MA, MS, BCBA LBA
+                    </p>
+                    <p className="text-gray-600 leading-relaxed">
+                      Our dedicated Board Certified Behavior Analyst brings expertise, compassion, and personalized care to every family we serve. With advanced degrees and specialized certification, Alicia is committed to providing the highest quality ABA services in the comfort of your home.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Three Key Points */}
@@ -397,228 +431,46 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden" id="contact">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-klubhouse-gold rounded-full"></div>
-          <div className="absolute bottom-20 right-10 w-24 h-24 bg-klubhouse-accent rounded-full"></div>
-          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-klubhouse-gold rounded-full"></div>
-          <div className="absolute top-1/3 right-1/4 w-20 h-20 bg-klubhouse-accent rounded-full"></div>
-        </div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <span className="text-5xl">📞</span>
-              <h2 className="text-6xl font-light text-gray-800">Contact Us</h2>
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            {/* Call Us Today */}
+            <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-3xl p-12 text-center shadow-2xl transform hover:scale-105 transition-transform duration-300">
+              <div className="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <svg className="w-10 h-10 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                </svg>
+              </div>
+              <h3 className="text-3xl font-bold text-black mb-4">Call Us Today</h3>
+              <p className="text-4xl font-bold text-black mb-4">404-838-7010</p>
+              <p className="text-black text-lg">Available for immediate assistance</p>
             </div>
-            <h3 className="text-2xl text-klubhouse-gold font-medium mb-4">Ready to Start Your Journey?</h3>
-            <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
-              Learn more about how <span className="text-klubhouse-gold font-medium">Klubhouse Therapy Services</span> can support your family with compassionate, personalized ABA care at home.
-            </p>
-            <div className="w-32 h-1 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent mx-auto mt-8 rounded-full"></div>
+
+            {/* Email Us */}
+            <div className="bg-gradient-to-l from-purple-600 to-pink-500 rounded-3xl p-12 text-center shadow-2xl transform hover:scale-105 transition-transform duration-300">
+              <div className="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <svg className="w-10 h-10 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                </svg>
+              </div>
+              <h3 className="text-3xl font-bold text-white mb-4">Email Us</h3>
+              <p className="text-2xl font-bold text-yellow-300 mb-4">admin@klubhousetherapyservices.com</p>
+              <p className="text-white text-lg">We'll respond within 24 hours</p>
+            </div>
           </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white p-10 rounded-3xl shadow-2xl border border-gray-100 relative overflow-hidden">
-              {/* Form Background Pattern */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-klubhouse-gold/10 to-klubhouse-accent/10 rounded-full transform translate-x-16 -translate-y-16"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-klubhouse-accent/10 to-klubhouse-gold/10 rounded-full transform -translate-x-12 translate-y-12"></div>
-              
-              <div className="relative z-10">
-              <form
-                onSubmit={async (e) => {
-                  e.preventDefault();
-                  const form = e.target as HTMLFormElement;
-                  const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
-                  const originalText = submitButton.textContent;
-                  
-                  // Show loading state
-                  submitButton.textContent = 'Sending...';
-                  submitButton.disabled = true;
-                  
-                  const formData = new FormData(e.target as HTMLFormElement);
-                  
-                  // Validate file attachments
-                  const files = formData.getAll('attachments') as File[];
-                  const validFiles = files.filter(file => file.size > 0);
-                  
-                  if (validFiles.length > 5) {
-                    alert('❌ Maximum 5 files allowed. Please remove some files and try again.');
-                    submitButton.textContent = originalText;
-                    submitButton.disabled = false;
-                    return;
-                  }
-                  
-                  for (const file of validFiles) {
-                    if (file.size > 10 * 1024 * 1024) { // 10MB limit
-                      alert(`❌ File "${file.name}" is too large. Maximum file size is 10MB.`);
-                      submitButton.textContent = originalText;
-                      submitButton.disabled = false;
-                      return;
-                    }
-                  }
-                  
-                  try {
-                    const response = await fetch('/api/send-email', {
-                      method: 'POST',
-                      body: formData, // Send FormData directly
-                    });
-                    
-                    if (response.ok) {
-                      alert('✅ Message sent successfully! We\'ll get back to you within 24 hours.');
-                      (e.target as HTMLFormElement).reset();
-                    } else {
-                      const errorData = await response.json();
-                      throw new Error(errorData.error || 'Failed to send message');
-                    }
-                  } catch (error) {
-                    console.error('Contact form error:', error);
-                    alert('❌ Sorry, there was an error sending your message. Please call us directly at 404-838-7010 or email klubhousetherapyservices@outlook.com');
-                  } finally {
-                    // Reset button state
-                    submitButton.textContent = originalText;
-                    submitButton.disabled = false;
-                  }
-                }}
-                className="space-y-6"
-              >
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">👤 Full Name *</label>
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Enter your full name"
-                      required
-                      className="w-full p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-klubhouse-gold transition-all duration-300 hover:border-klubhouse-accent"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">📧 Email Address *</label>
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="your.email@example.com"
-                      required
-                      className="w-full p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-klubhouse-gold transition-all duration-300 hover:border-klubhouse-accent"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">📞 Phone Number</label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="(404) 123-4567"
-                    className="w-full p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-klubhouse-gold transition-all duration-300 hover:border-klubhouse-accent"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">💭 Tell Us About Your Needs *</label>
-                  <textarea
-                    name="message"
-                    placeholder="Please share details about your family's needs, goals, or any questions you have about our ABA services..."
-                    rows={6}
-                    required
-                    className="w-full p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-klubhouse-gold resize-none transition-all duration-300 hover:border-klubhouse-accent"
-                  ></textarea>
-                </div>
-
-                {/* File Attachment Section */}
-                <div className="bg-gradient-to-r from-klubhouse-gold/10 to-klubhouse-accent/10 p-6 rounded-xl border-2 border-dashed border-klubhouse-gold/30">
-                  <label className="block text-sm font-semibold text-gray-700 mb-3">
-                    📎 Attach Files (Optional)
-                  </label>
-                  <input
-                    type="file"
-                    name="attachments"
-                    multiple
-                    accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.gif,.txt"
-                    className="w-full p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-klubhouse-gold focus:border-klubhouse-gold transition-all duration-300 hover:border-klubhouse-accent file:mr-4 file:py-3 file:px-6 file:rounded-full file:border-0 file:text-sm file:font-bold file:bg-gradient-to-r file:from-klubhouse-gold file:to-klubhouse-accent file:text-klubhouse-black hover:file:shadow-lg file:transition-all file:duration-300"
-                  />
-                  <div className="mt-3 bg-white p-3 rounded-lg border border-gray-200">
-                    <p className="text-sm text-gray-600 font-medium">
-                      📋 <strong>Upload Guidelines:</strong>
-                    </p>
-                    <ul className="text-xs text-gray-500 mt-1 space-y-1">
-                      <li>• Maximum 5 files, 10MB each</li>
-                      <li>• Supported formats: PDF, DOC, DOCX, JPG, PNG, GIF, TXT</li>
-                      <li>• Perfect for reports, assessments, or relevant documents</li>
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Submit Button */}
-                <div className="text-center pt-4">
-                  <button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-klubhouse-gold via-klubhouse-accent to-purple-600 text-white px-10 py-5 rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-300 font-bold text-xl relative overflow-hidden group"
-                  >
-                    <span className="absolute inset-0 bg-gradient-to-r from-purple-600 via-klubhouse-accent to-klubhouse-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                    <span className="relative z-10 flex items-center justify-center gap-3">
-                      <span>🚀</span>
-                      Send Message
-                      <span>✨</span>
-                    </span>
-                  </button>
-                  <p className="text-sm text-gray-500 mt-3 font-medium">
-                    We'll respond within 24 hours with compassionate care! 💙
-                  </p>
-                </div>
-              </form>
-              </div>
-            </div>
-            
-            {/* Contact Information Cards */}
-            <div className="grid md:grid-cols-2 gap-8 mt-16 max-w-4xl mx-auto">
-              {/* Phone Card */}
-              <div className="bg-gradient-to-br from-klubhouse-gold to-klubhouse-accent p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center">
-                <div className="w-16 h-16 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-3xl">📞</span>
-                </div>
-                <h3 className="text-xl font-bold text-klubhouse-black mb-4">Call Us Today</h3>
-                <a 
-                  href="tel:404-838-7010" 
-                  className="text-2xl font-bold text-klubhouse-black hover:scale-105 transition-transform duration-300 inline-block"
-                >
-                  404-838-7010
-                </a>
-                <p className="text-klubhouse-black mt-3 font-medium">Available for immediate assistance</p>
-              </div>
-
-              {/* Email Card */}
-              <div className="bg-gradient-to-br from-klubhouse-accent to-purple-600 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center">
-                <div className="w-16 h-16 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-3xl">📧</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Email Us</h3>
-                <a 
-                  href="mailto:admin@klubhousetherapyservices.com" 
-                  className="text-lg font-semibold text-klubhouse-gold hover:scale-105 transition-transform duration-300 inline-block break-all"
-                >
-                  admin@klubhousetherapyservices.com
-                </a>
-                <p className="text-white mt-3 font-medium">We'll respond within 24 hours</p>
-              </div>
-            </div>
-
-            {/* CHRIS Values Banner */}
-            <div className="mt-16 bg-gradient-to-r from-klubhouse-gold via-klubhouse-accent to-purple-600 p-8 rounded-2xl shadow-lg text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                At Klubhouse Therapy Services, <span className="text-klubhouse-black">CHRIS</span> means <span className="text-klubhouse-black">Compassion</span> and <span className="text-klubhouse-black">Care</span> at Home.
-              </h3>
-              <div className="flex flex-wrap justify-center gap-4 mt-6">
-                <span className="bg-white text-klubhouse-accent px-4 py-2 rounded-full font-semibold shadow-lg">Compassion</span>
-                <span className="bg-white text-klubhouse-accent px-4 py-2 rounded-full font-semibold shadow-lg">Hope</span>
-                <span className="bg-white text-klubhouse-accent px-4 py-2 rounded-full font-semibold shadow-lg">Respect</span>
-                <span className="bg-white text-klubhouse-accent px-4 py-2 rounded-full font-semibold shadow-lg">Inclusion</span>
-                <span className="bg-white text-klubhouse-accent px-4 py-2 rounded-full font-semibold shadow-lg">Support</span>
-              </div>
+          {/* CHRIS Values */}
+          <div className="bg-gradient-to-r from-yellow-400 via-orange-500 via-pink-500 to-purple-600 rounded-3xl p-12 text-center shadow-2xl transform hover:scale-105 transition-transform duration-300">
+            <h2 className="text-4xl font-bold text-white mb-8">
+              At Klubhouse Therapy Services, <span className="text-black">CHRIS</span> means Compassion and Care at Home.
+            </h2>
+            <div className="flex flex-wrap justify-center gap-4">
+              {['Compassion', 'Hope', 'Respect', 'Inclusion', 'Support'].map((value) => (
+                <span key={value} className="bg-white bg-opacity-20 backdrop-blur-sm text-white px-6 py-3 rounded-full text-lg font-semibold border border-white border-opacity-30 hover:bg-opacity-30 transition-all duration-300">
+                  {value}
+                </span>
+              ))}
             </div>
           </div>
         </div>

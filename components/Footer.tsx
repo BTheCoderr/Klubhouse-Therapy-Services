@@ -19,6 +19,9 @@ export const Footer = () => {
           {/* Contact Info */}
           <div>
             <h3 className="text-2xl font-semibold mb-6">Klubhouse Therapy Services</h3>
+            <p className="text-gray-600 mb-2">
+              <span className="font-medium">Alicia Paduan MA, MS, BCBA LBA</span>
+            </p>
             <p className="text-gray-600 mb-4">Atlanta, Georgia, United States</p>
             <p className="mb-2">
               <a href="mailto:admin@klubhousetherapyservices.com" className="text-gray-600 hover:text-primary">
