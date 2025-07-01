@@ -431,46 +431,132 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section className="py-20 px-4 bg-gray-50" id="contact">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            {/* Call Us Today */}
-            <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-3xl p-12 text-center shadow-2xl transform hover:scale-105 transition-transform duration-300">
-              <div className="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <svg className="w-10 h-10 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
-                </svg>
-              </div>
-              <h3 className="text-3xl font-bold text-black mb-4">Call Us Today</h3>
-              <p className="text-4xl font-bold text-black mb-4">404-838-7010</p>
-              <p className="text-black text-lg">Available for immediate assistance</p>
-            </div>
-
-            {/* Email Us */}
-            <div className="bg-gradient-to-l from-purple-600 to-pink-500 rounded-3xl p-12 text-center shadow-2xl transform hover:scale-105 transition-transform duration-300">
-              <div className="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <svg className="w-10 h-10 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-                </svg>
-              </div>
-              <h3 className="text-3xl font-bold text-white mb-4">Email Us</h3>
-              <p className="text-2xl font-bold text-yellow-300 mb-4">admin@klubhousetherapyservices.com</p>
-              <p className="text-white text-lg">We'll respond within 24 hours</p>
-            </div>
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-light text-gray-800 mb-6">Get Started Today</h2>
+            <p className="text-xl text-gray-600 mb-8">Ready to begin your journey with us? Contact us today!</p>
+            <div className="w-24 h-1 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent mx-auto rounded-full"></div>
           </div>
 
-          {/* CHRIS Values */}
-          <div className="bg-gradient-to-r from-yellow-400 via-orange-500 via-pink-500 to-purple-600 rounded-3xl p-12 text-center shadow-2xl transform hover:scale-105 transition-transform duration-300">
-            <h2 className="text-4xl font-bold text-white mb-8">
-              At Klubhouse Therapy Services, <span className="text-black">CHRIS</span> means Compassion and Care at Home.
-            </h2>
-            <div className="flex flex-wrap justify-center gap-4">
-              {['Compassion', 'Hope', 'Respect', 'Inclusion', 'Support'].map((value) => (
-                <span key={value} className="bg-white bg-opacity-20 backdrop-blur-sm text-white px-6 py-3 rounded-full text-lg font-semibold border border-white border-opacity-30 hover:bg-opacity-30 transition-all duration-300">
-                  {value}
-                </span>
-              ))}
+          <div className="grid lg:grid-cols-2 gap-12 mb-12">
+            {/* Contact Form */}
+            <div className="bg-white rounded-2xl shadow-xl p-8">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Send us a message</h3>
+              <form 
+                name="contact" 
+                method="POST" 
+                data-netlify="true" 
+                data-netlify-honeypot="bot-field"
+                action="/thank-you"
+                className="space-y-6"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                
+                {/* Honeypot field */}
+                <p className="hidden">
+                  <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+                
+                <div>
+                  <input 
+                    type="text" 
+                    name="name" 
+                    placeholder="Name" 
+                    required
+                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all"
+                  />
+                </div>
+                
+                <div>
+                  <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Email*" 
+                    required
+                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all"
+                  />
+                </div>
+                
+                <div>
+                  <input 
+                    type="tel" 
+                    name="phone" 
+                    placeholder="Phone" 
+                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all"
+                  />
+                </div>
+                
+                <div>
+                  <textarea 
+                    name="message" 
+                    placeholder="Notes" 
+                    rows={6} 
+                    className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent resize-none transition-all"
+                  ></textarea>
+                </div>
+                
+                <div className="text-left">
+                  <label className="text-sm text-gray-600 cursor-pointer hover:text-yellow-600 transition-colors">
+                    <input type="file" name="attachment" multiple className="mr-2" />
+                    Attach Files
+                  </label>
+                </div>
+                
+                <button 
+                  type="submit" 
+                  className="w-full bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-8 py-4 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 font-semibold text-lg"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+
+            {/* Contact Information */}
+            <div className="space-y-8">
+              {/* Call Us Today */}
+              <div className="bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent rounded-3xl p-8 text-center shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <svg className="w-8 h-8 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-klubhouse-black mb-2">Call Us Today</h3>
+                <a 
+                  href="tel:404-838-7010"
+                  className="text-3xl font-bold text-klubhouse-black mb-2 block hover:scale-105 transition-transform"
+                >
+                  404-838-7010
+                </a>
+                <p className="text-klubhouse-black text-sm">Available for immediate assistance</p>
+              </div>
+
+              {/* Email Us */}
+              <div className="bg-gradient-to-r from-purple-600 to-pink-500 rounded-3xl p-8 text-center shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <svg className="w-8 h-8 text-gray-800" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">Email Us</h3>
+                <p className="text-lg font-bold text-yellow-300 mb-2">admin@klubhousetherapyservices.com</p>
+                <p className="text-white text-sm">We'll respond within 24 hours</p>
+              </div>
+
+              {/* CHRIS Values */}
+              <div className="bg-gradient-to-r from-klubhouse-gold via-klubhouse-accent to-purple-600 rounded-3xl p-8 text-center shadow-2xl">
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  <span className="text-klubhouse-black">CHRIS</span> means Compassion and Care at Home
+                </h3>
+                <div className="grid grid-cols-2 gap-2 text-sm">
+                  {['Compassion', 'Hope', 'Respect', 'Inclusion', 'Support'].map((value) => (
+                    <span key={value} className="bg-white bg-opacity-20 backdrop-blur-sm text-white px-3 py-2 rounded-full font-semibold border border-white border-opacity-30">
+                      {value}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
