@@ -84,8 +84,8 @@ export default function Home() {
         </div>
       </header>
       
-      {/* Amazing Hero Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+      {/* Hero Section */}
+      <section className="py-12 md:py-20 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-10 w-32 h-32 bg-klubhouse-gold rounded-full"></div>
@@ -94,32 +94,32 @@ export default function Home() {
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-24 max-w-7xl mx-auto">
-            {/* Large Logo with Enhanced Styling */}
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 max-w-6xl mx-auto">
+            {/* Logo */}
             <div className="flex-shrink-0 relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-klubhouse-gold/20 to-klubhouse-accent/20 rounded-3xl blur-xl"></div>
-              <div className="relative bg-white rounded-2xl p-8 shadow-2xl border border-gray-100">
+              <div className="absolute -inset-2 bg-gradient-to-r from-klubhouse-gold/20 to-klubhouse-accent/20 rounded-2xl blur-lg"></div>
+              <div className="relative bg-white rounded-xl p-4 md:p-6 shadow-xl border border-gray-100">
                 <Image
                   src="/images/logo-large.png"
                   alt="Klubhouse Therapy Services"
-                  width={500}
-                  height={500}
-                  className="w-80 h-80 lg:w-[28rem] lg:h-[28rem] object-contain drop-shadow-lg"
+                  width={300}
+                  height={300}
+                  className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 object-contain drop-shadow-lg"
                   priority
                 />
               </div>
             </div>
             
-            {/* Welcome Text with Amazing Typography */}
-            <div className="text-center lg:text-left space-y-8">
+            {/* Welcome Text */}
+            <div className="text-center lg:text-left space-y-6 flex-1">
               <div className="space-y-4">
-                <h1 className="text-7xl md:text-8xl lg:text-9xl font-extralight text-gray-800 tracking-wider leading-none">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-extralight text-gray-800 tracking-wider leading-tight">
                   WELCOME
                 </h1>
-                <div className="w-32 h-1 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent mx-auto lg:mx-0 rounded-full"></div>
+                <div className="w-24 h-1 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent mx-auto lg:mx-0 rounded-full"></div>
               </div>
               
-              <p className="text-xl md:text-2xl text-gray-600 font-light max-w-md leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-600 font-light max-w-lg leading-relaxed">
                 At Klubhouse Therapy Services, 
                 <span className="text-klubhouse-gold font-medium"> CHRIS</span> means 
                 <span className="text-klubhouse-accent font-medium"> Compassion</span> and 
@@ -127,13 +127,13 @@ export default function Home() {
               </p>
               
               {/* Call to Action */}
-              <div className="pt-6">
+              <div className="pt-4">
                 <a 
                   href="#contact" 
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent text-klubhouse-black font-semibold rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300 group"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent text-klubhouse-black font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 group"
                 >
                   Get Started Today
-                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </a>
