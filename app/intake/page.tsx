@@ -369,6 +369,139 @@ export default function IntakePage() {
               </div>
             </div>
 
+            {/* Behavioral Health History */}
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-6 pb-2 border-b-2 border-yellow-400">
+                Behavioral Health History
+              </h2>
+              <div className="space-y-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Name of the Provider:
+                  </label>
+                  <input
+                    type="text"
+                    name="behavioralProviderName"
+                    className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address:
+                  </label>
+                  <input
+                    type="email"
+                    name="behavioralProviderEmail"
+                    className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Phone Number:
+                  </label>
+                  <input
+                    type="tel"
+                    name="behavioralProviderPhone"
+                    className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+                  />
+                </div>
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    name="contactBehavioralProvider"
+                    value="yes"
+                    className="mr-3 text-yellow-400 focus:ring-yellow-400 rounded"
+                  />
+                  <label className="text-gray-700">
+                    I would like Klubhouse Therapy Services to contact this provider.
+                  </label>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Therapeutic Intervention:
+                  </label>
+                  <textarea
+                    name="therapeuticIntervention"
+                    rows={3}
+                    className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent resize-none"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Response to the Intervention:
+                  </label>
+                  <textarea
+                    name="interventionResponse"
+                    rows={3}
+                    className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent resize-none"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Community Resources */}
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-6 pb-2 border-b-2 border-yellow-400">
+                Community Resources
+              </h2>
+              <p className="text-sm text-gray-600 mb-6">
+                (Support Groups, Social Services, School Based Services, Other Therapies such as OT/PT/SPEECH etc.)
+              </p>
+              <div className="space-y-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Name of the Provider:
+                  </label>
+                  <input
+                    type="text"
+                    name="communityProviderName"
+                    className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address:
+                  </label>
+                  <input
+                    type="email"
+                    name="communityProviderEmail"
+                    className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Phone Number:
+                  </label>
+                  <input
+                    type="tel"
+                    name="communityProviderPhone"
+                    className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+                  />
+                </div>
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    name="contactCommunityProvider"
+                    value="yes"
+                    className="mr-3 text-yellow-400 focus:ring-yellow-400 rounded"
+                  />
+                  <label className="text-gray-700">
+                    I would like Klubhouse Therapy Services to contact this provider.
+                  </label>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Notes:
+                  </label>
+                  <textarea
+                    name="communityResourceNotes"
+                    rows={4}
+                    className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent resize-none"
+                  />
+                </div>
+              </div>
+            </div>
+
             {/* Submit Button */}
             <div className="text-center pt-8">
               <button
