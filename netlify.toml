@@ -2,6 +2,8 @@
   command = "npm run build"
   publish = ".next"
 
+# Force rebuild to detect all Netlify forms - 2025-01-27
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
