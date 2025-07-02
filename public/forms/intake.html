@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Intake Form</title>
+</head>
+<body>
+  <form name="intake" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you" method="POST" hidden>
+    <input type="hidden" name="form-name" value="intake" />
+    <p>
+      <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+    </p>
+    
+    <!-- Basic Information -->
+    <p><label>Child's Name: <input type="text" name="childName" /></label></p>
+    <p><label>Age: <input type="text" name="age" /></label></p>
+    <p><label>Date: <input type="date" name="date" /></label></p>
+    <p><label>Form Completed By: <input type="text" name="completedBy" /></label></p>
+    <p><label>Relationship to Child: <input type="text" name="relationship" /></label></p>
+    <p><label>Legal Guardian: <select name="legalGuardian"><option value="">Select...</option><option value="yes">Yes</option><option value="no">No</option></select></label></p>
+    <p><label>Client's Insurance: <input type="text" name="clientsInsurance" /></label></p>
+    <p><label>Member ID: <input type="text" name="memberID" /></label></p>
+    
+    <!-- Medical History -->
+    <p><label>Primary Care Physician: <textarea name="primaryCarePhysician"></textarea></label></p>
+    <p><label>Allergies: <textarea name="allergies"></textarea></label></p>
+    <p><label>Life Threatening: <textarea name="lifeThreatening"></textarea></label></p>
+    <p><label>Allergic Instructions: <textarea name="allergicInstructions"></textarea></label></p>
+    <p><label>Dietary Restrictions: <textarea name="dietaryRestrictions"></textarea></label></p>
+    
+    <!-- Health Review -->
+    <p><label>Overall Health: <input type="radio" name="overallHealth" value="Excellent" /></label></p>
+    <p><label>Overall Health: <input type="radio" name="overallHealth" value="Very good" /></label></p>
+    <p><label>Overall Health: <input type="radio" name="overallHealth" value="Good" /></label></p>
+    <p><label>Overall Health: <input type="radio" name="overallHealth" value="Not very good" /></label></p>
+    <p><label>Overall Health: <input type="radio" name="overallHealth" value="Poor" /></label></p>
+    
+    <!-- Psychological Conditions -->
+    <p><label>Psych Conditions: <input type="checkbox" name="psychConditions" value="Anxiety" /></label></p>
+    <p><label>Psych Conditions: <input type="checkbox" name="psychConditions" value="Depression" /></label></p>
+    <p><label>Psych Conditions: <input type="checkbox" name="psychConditions" value="Suicidal" /></label></p>
+    <p><label>Psych Conditions: <input type="checkbox" name="psychConditions" value="Sleeping issues" /></label></p>
+    <p><label>Psych Conditions: <input type="checkbox" name="psychConditions" value="Feeding/eating issues" /></label></p>
+    <p><label>Psych Conditions: <input type="checkbox" name="psychConditions" value="Autism" /></label></p>
+    <p><label>Psych Conditions: <input type="checkbox" name="psychConditions" value="Bi-polar disorder" /></label></p>
+    <p><label>Psych Conditions: <input type="checkbox" name="psychConditions" value="ADHD" /></label></p>
+    
+    <!-- Social History -->
+    <p><label>Primary Language: <textarea name="primaryLanguage"></textarea></label></p>
+    <p><label>Legal Issues: <textarea name="legalIssues"></textarea></label></p>
+    <p><label>Spiritual Needs: <textarea name="spiritualNeeds"></textarea></label></p>
+    <p><label>Cultural Variables: <textarea name="culturalVariables"></textarea></label></p>
+    
+    <!-- School Information -->
+    <p><label>School Settings: <input type="checkbox" name="schoolSettings" value="Gifted" /></label></p>
+    <p><label>School Settings: <input type="checkbox" name="schoolSettings" value="Advance/Gifted" /></label></p>
+    <p><label>School Settings: <input type="checkbox" name="schoolSettings" value="Special ED inclusion" /></label></p>
+    <p><label>School Settings: <input type="checkbox" name="schoolSettings" value="Regular Education" /></label></p>
+    <p><label>School Settings: <input type="checkbox" name="schoolSettings" value="Special ED self contained" /></label></p>
+    <p><label>School Settings: <input type="checkbox" name="schoolSettings" value="Private School" /></label></p>
+    <p><label>School Settings: <input type="checkbox" name="schoolSettings" value="Daycare" /></label></p>
+    <p><label>School Settings: <input type="checkbox" name="schoolSettings" value="My child currently has an IEP" /></label></p>
+    
+    <p><label>School Name: <input type="text" name="schoolName" /></label></p>
+    <p><label>Grade: <input type="text" name="grade" /></label></p>
+    <p><label>School Address: <input type="text" name="schoolAddress" /></label></p>
+    <p><label>School Contact: <input type="text" name="schoolContact" /></label></p>
+    <p><label>Teacher Name: <input type="text" name="teacherName" /></label></p>
+    <p><label>Teacher Phone: <input type="tel" name="teacherPhone" /></label></p>
+    
+    <!-- Living Situation -->
+    <p><label>Child Resides With: <textarea name="childResidesWith"></textarea></label></p>
+  </form>
+</body>
+</html> 
