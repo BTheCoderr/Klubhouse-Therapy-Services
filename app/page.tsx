@@ -127,16 +127,24 @@ export default function Home() {
               </p>
               
               {/* Call to Action */}
-              <div className="pt-6">
+              <div className="pt-6 space-y-4">
                 <a 
-                  href="#contact" 
+                  href="/intake" 
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-klubhouse-gold to-klubhouse-accent text-klubhouse-black font-semibold rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300 group"
                 >
-                  Get Started Today
+                  Complete Intake Form
                   <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </a>
+                <div>
+                  <a 
+                    href="#contact" 
+                    className="inline-flex items-center px-6 py-3 bg-white text-klubhouse-black border-2 border-klubhouse-gold font-semibold rounded-full hover:bg-klubhouse-gold hover:scale-105 transition-all duration-300"
+                  >
+                    Quick Contact
+                  </a>
+                </div>
               </div>
             </div>
           </div>
