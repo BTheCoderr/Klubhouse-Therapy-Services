@@ -457,6 +457,7 @@ export default function Home() {
                 data-netlify="true" 
                 data-netlify-honeypot="bot-field"
                 action="/thank-you"
+                encType="multipart/form-data"
                 className="space-y-6"
               >
                 <input type="hidden" name="form-name" value="contact" />

@@ -8,7 +8,7 @@
   <h1>Form Detection Page - Hidden from Users</h1>
   
   <!-- Contact Form -->
-  <form name="contact" data-netlify="true" hidden>
+  <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
     <input type="hidden" name="form-name" value="contact" />
     <input name="bot-field" type="hidden" />
     <input name="name" type="text" />
@@ -19,7 +19,7 @@
   </form>
 
   <!-- Simple Intake Form -->
-  <form name="simple-intake" data-netlify="true" hidden>
+  <form name="simple-intake" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
     <input type="hidden" name="form-name" value="simple-intake" />
     <input name="bot-field" type="hidden" />
     <input name="childName" type="text" />
@@ -28,17 +28,8 @@
     <textarea name="notes"></textarea>
   </form>
 
-  <!-- Intake Test Form -->
-  <form name="intake-test" data-netlify="true" hidden>
-    <input type="hidden" name="form-name" value="intake-test" />
-    <input name="bot-field" type="hidden" />
-    <input name="name" type="text" />
-    <input name="email" type="email" />
-    <textarea name="message"></textarea>
-  </form>
-
   <!-- Full Intake Form -->
-  <form name="intake" data-netlify="true" hidden>
+  <form name="intake" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
     <input type="hidden" name="form-name" value="intake" />
     <input name="bot-field" type="hidden" />
     
