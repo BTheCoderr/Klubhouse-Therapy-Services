@@ -17,6 +17,10 @@
 [build.processing.html]
   pretty_urls = true
 
+# Force Netlify to detect forms during build
+[build.environment]
+  NEXT_STATIC_FORMS = "true"
+
 # Environment variables for production
 [context.production.environment]
   NEXT_PUBLIC_DOMAIN = "klubhousetherapyservices.com"
