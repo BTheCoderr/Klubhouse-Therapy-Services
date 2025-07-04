@@ -13,18 +13,18 @@ export default function SimpleIntakePage() {
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-light text-gray-800 mb-4">
-              Simple Intake Test
+              Simple Intake Form
             </h1>
             <p className="text-lg text-gray-600 mb-8">
-              Testing the basic form functionality first
+              Please fill out this brief form to get started
             </p>
           </div>
 
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <form 
               name="simple-intake" 
-              method="POST" 
-              data-netlify="true" 
+              method="post"
+              data-netlify="true"
               data-netlify-honeypot="bot-field"
               action="/thank-you"
               className="space-y-6"
@@ -78,7 +78,7 @@ export default function SimpleIntakePage() {
                 type="submit" 
                 className="w-full bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-8 py-4 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 font-semibold text-lg"
               >
-                Test Submit Simple Form
+                Submit Form
               </button>
             </form>
           </div>
