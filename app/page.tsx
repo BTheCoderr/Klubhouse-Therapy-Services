@@ -458,6 +458,26 @@ export default function Home() {
                 data-netlify-honeypot="bot-field"
                 action="/thank-you"
                 className="space-y-6"
+                onSubmit={async (e) => {
+                  e.preventDefault();
+                  const formData = new FormData(e.target as HTMLFormElement);
+                  
+                  try {
+                    const response = await fetch('/forms/contact.html', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                      body: new URLSearchParams(formData as any).toString(),
+                    });
+                    
+                    if (response.ok) {
+                      window.location.href = '/thank-you';
+                    } else {
+                      alert('There was an error submitting your form. Please try again.');
+                    }
+                  } catch (error) {
+                    alert('There was an error submitting your form. Please try again.');
+                  }
+                }}
               >
                 <input type="hidden" name="form-name" value="contact" />
                 
