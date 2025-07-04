@@ -457,7 +457,6 @@ export default function Home() {
                 data-netlify="true" 
                 data-netlify-honeypot="bot-field"
                 action="/thank-you"
-                encType="multipart/form-data"
                 className="space-y-6"
               >
                 <input type="hidden" name="form-name" value="contact" />
@@ -503,13 +502,6 @@ export default function Home() {
                     rows={6} 
                     className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent resize-none transition-all"
                   ></textarea>
-                </div>
-                
-                <div className="text-left">
-                  <label className="text-sm text-gray-600 cursor-pointer hover:text-yellow-600 transition-colors">
-                    <input type="file" name="attachment" multiple className="mr-2" />
-                    Attach Files
-                  </label>
                 </div>
                 
                 <button 
