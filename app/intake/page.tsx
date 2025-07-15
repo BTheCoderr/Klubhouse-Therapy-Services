@@ -542,6 +542,29 @@ export default function IntakePage() {
               </div>
             </div>
 
+            {/* File Attachment */}
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-6 pb-2 border-b-2 border-yellow-400">
+                Additional Documents
+              </h2>
+              <div className="space-y-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Please attach Client's Psychological Evaluation (PDF, DOC, DOCX)
+                  </label>
+                  <input
+                    type="file"
+                    name="psychologicalEvaluation"
+                    accept=".pdf,.doc,.docx"
+                    className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-yellow-400 file:text-black hover:file:bg-yellow-500"
+                  />
+                  <p className="text-sm text-gray-500 mt-2">
+                    Accepted formats: PDF, DOC, DOCX (Max file size: 10MB)
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* Submit Button */}
             <div className="text-center pt-8">
               <button
