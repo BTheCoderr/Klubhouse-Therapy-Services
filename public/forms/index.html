@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Netlify Forms Detection</title>
+</head>
+<body>
+  <!-- This page ensures Netlify detects all forms during build -->
+  <h1>Form Detection Page - Hidden from Users</h1>
+  
+  <!-- Contact Form -->
+  <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact" />
+    <input name="bot-field" type="hidden" />
+    <input name="name" type="text" />
+    <input name="email" type="email" />
+    <input name="phone" type="tel" />
+    <textarea name="message"></textarea>
+    <input name="attachment" type="file" multiple />
+  </form>
+
+  <!-- Simple Intake Form -->
+  <form name="simple-intake" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="simple-intake" />
+    <input name="bot-field" type="hidden" />
+    <input name="childName" type="text" />
+    <input name="parentEmail" type="email" />
+    <input name="phone" type="tel" />
+    <textarea name="notes"></textarea>
+  </form>
+
+  <!-- Full Intake Form -->
+  <form name="intake" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="intake" />
+    <input name="bot-field" type="hidden" />
+    
+    <!-- Basic Information -->
+    <input name="childName" type="text" />
+    <input name="age" type="text" />
+    <input name="date" type="date" />
+    <input name="completedBy" type="text" />
+    <input name="relationship" type="text" />
+    <select name="legalGuardian">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <input name="clientsInsurance" type="text" />
+    <input name="memberID" type="text" />
+    
+    <!-- Medical History -->
+    <textarea name="primaryCarePhysician"></textarea>
+    <textarea name="allergies"></textarea>
+    <textarea name="lifeThreatening"></textarea>
+    <textarea name="allergicInstructions"></textarea>
+    <textarea name="dietaryRestrictions"></textarea>
+    
+    <!-- Health Review -->
+    <input name="overallHealth" type="radio" value="Excellent" />
+    <input name="overallHealth" type="radio" value="Very good" />
+    <input name="overallHealth" type="radio" value="Good" />
+    <input name="overallHealth" type="radio" value="Not very good" />
+    <input name="overallHealth" type="radio" value="Poor" />
+    
+    <!-- Psychological and Behavioral -->
+    <input name="psychConditions" type="checkbox" value="Anxiety" />
+    <input name="psychConditions" type="checkbox" value="Depression" />
+    <input name="psychConditions" type="checkbox" value="Suicidal" />
+    <input name="psychConditions" type="checkbox" value="Sleeping issues" />
+    <input name="psychConditions" type="checkbox" value="Feeding/eating issues" />
+    <input name="psychConditions" type="checkbox" value="Autism" />
+    <input name="psychConditions" type="checkbox" value="Bi-polar disorder" />
+    <input name="psychConditions" type="checkbox" value="ADHD" />
+    
+    <!-- Social History -->
+    <textarea name="primaryLanguage"></textarea>
+    <textarea name="legalIssues"></textarea>
+    <textarea name="spiritualNeeds"></textarea>
+    <textarea name="culturalVariables"></textarea>
+    
+    <!-- School Information -->
+    <input name="schoolSettings" type="checkbox" value="Gifted" />
+    <input name="schoolSettings" type="checkbox" value="Advance/Gifted" />
+    <input name="schoolSettings" type="checkbox" value="Special ED inclusion" />
+    <input name="schoolSettings" type="checkbox" value="Regular Education" />
+    <input name="schoolSettings" type="checkbox" value="Special ED self contained" />
+    <input name="schoolSettings" type="checkbox" value="Private School" />
+    <input name="schoolSettings" type="checkbox" value="Daycare" />
+    <input name="schoolSettings" type="checkbox" value="My child currently has an IEP" />
+    <input name="schoolName" type="text" />
+    <input name="grade" type="text" />
+    <input name="schoolAddress" type="text" />
+    <input name="schoolContact" type="text" />
+    <input name="teacherName" type="text" />
+    <input name="teacherPhone" type="tel" />
+    
+    <!-- Living Situation -->
+    <textarea name="childResidesWith"></textarea>
+    
+    <!-- Behavioral Health History -->
+    <input name="behavioralProviderName" type="text" />
+    <input name="behavioralProviderEmail" type="email" />
+    <input name="behavioralProviderPhone" type="tel" />
+    <input name="contactBehavioralProvider" type="checkbox" value="yes" />
+    <textarea name="therapeuticIntervention"></textarea>
+    <textarea name="interventionResponse"></textarea>
+    
+    <!-- Community Resources -->
+    <input name="communityProviderName" type="text" />
+    <input name="communityProviderEmail" type="email" />
+    <input name="communityProviderPhone" type="tel" />
+    <input name="contactCommunityProvider" type="checkbox" value="yes" />
+    <textarea name="communityResourceNotes"></textarea>
+  </form>
+</body>
+</html> 

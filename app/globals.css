@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #FF6B00;
+}
+
+body {
+  @apply text-gray-800;
+}
+
+/* Custom styles for form elements */
+input, textarea {
+  @apply focus:ring-2 focus:ring-primary focus:ring-opacity-50 focus:outline-none;
+}
+
+/* Custom transitions */
+.transition-colors {
+  @apply transition-all duration-200;
+}
+
+/* Custom container styles */
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+} 
