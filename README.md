@@ -9,7 +9,7 @@
 
 **A modern, responsive website for Klubhouse Therapy Services**
 
-[🌐 Live Demo](https://klubhouse-therapy-services.netlify.app) • [📋 Intake Form](/intake) • [📞 Contact](mailto:klubhousetherapyservices@outlook.com)
+[🌐 Live Demo](https://klubhousetherapyservices.com/) • [📋 Intake Form](https://klubhousetherapyservices.com/intake) • [📞 Contact](mailto:admin@klubhousetherapyservices.com)
 
 </div>
 
@@ -124,16 +124,16 @@ Klubhouse-Therapy-Services/
 
 ## 🌐 Live Demo
 
-- **Main Website:** [https://klubhouse-therapy-services.netlify.app](https://klubhouse-therapy-services.netlify.app)
-- **Intake Form:** [https://klubhouse-therapy-services.netlify.app/intake](https://klubhouse-therapy-services.netlify.app/intake)
+- **Main Website:** [https://klubhousetherapyservices.com/](https://klubhousetherapyservices.com/)
+- **Intake Form:** [https://klubhousetherapyservices.com/intake](https://klubhousetherapyservices.com/intake)
 
 ## 📞 Contact Information
 
 | Method | Details |
 |--------|---------|
 | **Phone** | (404) 838-7010 |
-| **Email** | [klubhousetherapyservices@outlook.com](mailto:klubhousetherapyservices@outlook.com) |
-| **Website** | [klubhouse-therapy-services.netlify.app](https://klubhouse-therapy-services.netlify.app) |
+| **Email** | [admin@klubhousetherapyservices.com](mailto:admin@klubhousetherapyservices.com) |
+| **Website** | [klubhousetherapyservices.com](https://klubhousetherapyservices.com/) |
 
 ## 🤝 Contributing
 
