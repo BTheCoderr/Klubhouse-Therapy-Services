@@ -9,7 +9,7 @@
 
 **A modern, responsive website for Klubhouse Therapy Services**
 
-[🌐 Live Demo](https://klubhouse-therapy-services.netlify.app) • [📋 Intake Form](/intake) • [📞 Contact](mailto:klubhousetherapyservices@outlook.com)
+[🌐 Live Demo]((https://klubhousetherapyservices.com/)) • [📋 Intake Form](/intake) • [📞 Contact](mailto:klubhousetherapyservices@outlook.com)
 
 </div>
 
