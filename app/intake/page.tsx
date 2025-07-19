@@ -44,6 +44,7 @@ export default function IntakePage() {
             data-netlify="true" 
             data-netlify-honeypot="bot-field"
             action="/thank-you"
+            encType="multipart/form-data"
             className="space-y-8"
           >
             <input type="hidden" name="form-name" value="intake" />
