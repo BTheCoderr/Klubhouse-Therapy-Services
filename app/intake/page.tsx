@@ -22,33 +22,21 @@ export default function IntakePage() {
             <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto rounded-full"></div>
           </div>
 
+          {/* Simple Disclaimer */}
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8 rounded-lg">
+            <p className="text-yellow-800">
+              <strong>Please have ready:</strong> Contact number, email address, and student evaluation documents (if available).
+            </p>
+          </div>
+
           <form 
             name="intake" 
             method="POST" 
             data-netlify="true" 
             data-netlify-honeypot="bot-field"
+            encType="multipart/form-data"
             action="/thank-you"
             className="space-y-8"
-            onSubmit={async (e) => {
-              e.preventDefault();
-              const formData = new FormData(e.target as HTMLFormElement);
-              
-              try {
-                const response = await fetch('/forms/intake.html', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                  body: new URLSearchParams(formData as any).toString(),
-                });
-                
-                if (response.ok) {
-                  window.location.href = '/thank-you';
-                } else {
-                  alert('There was an error submitting your form. Please try again.');
-                }
-              } catch (error) {
-                alert('There was an error submitting your form. Please try again.');
-              }
-            }}
           >
             <input type="hidden" name="form-name" value="intake" />
             
