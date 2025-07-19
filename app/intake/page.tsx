@@ -44,6 +44,7 @@ export default function IntakePage() {
             method="POST" 
             data-netlify="true" 
             data-netlify-honeypot="bot-field"
+            encType="multipart/form-data"
             action="/thank-you"
             className="space-y-8"
           >
