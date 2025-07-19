@@ -56,6 +56,8 @@ export default function RootLayout({
             </select>
             <input name="clientsInsurance" />
             <input name="memberID" />
+            <input type="email" name="contactEmail" />
+            <input type="tel" name="contactPhone" />
             <textarea name="primaryCarePhysician"></textarea>
             <textarea name="allergies"></textarea>
             <textarea name="lifeThreatening"></textarea>
