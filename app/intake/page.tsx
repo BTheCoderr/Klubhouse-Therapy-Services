@@ -1,10 +1,49 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 
 export default function IntakePage() {
+  const [fileUploaded, setFileUploaded] = useState(false);
+  const [fileUrl, setFileUrl] = useState('');
+  const [uploading, setUploading] = useState(false);
+
+  const handleFileUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    setUploading(true);
+    
+    // Use a simple file upload service
+    const formData = new FormData();
+    formData.append('file', file);
+
+    try {
+      // Using a simple file upload service
+      const response = await fetch('https://file.io', {
+        method: 'POST',
+        body: formData
+      });
+
+      const data = await response.json();
+      
+      if (data.link) {
+        setFileUrl(data.link);
+        setFileUploaded(true);
+        // Set the file URL in a hidden input for form submission
+        const fileUrlInput = document.getElementById('fileUrl') as HTMLInputElement;
+        if (fileUrlInput) {
+          fileUrlInput.value = data.link;
+        }
+      }
+    } catch (error) {
+      console.error('Upload failed:', error);
+      alert('File upload failed. Please try again.');
+    } finally {
+      setUploading(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -44,11 +83,11 @@ export default function IntakePage() {
             method="POST" 
             data-netlify="true" 
             data-netlify-honeypot="bot-field"
-            encType="multipart/form-data"
             action="/thank-you"
             className="space-y-8"
           >
             <input type="hidden" name="form-name" value="intake" />
+            <input type="hidden" id="fileUrl" name="psychologicalEvaluation" value={fileUrl} />
             
             {/* Honeypot field */}
             <p className="hidden">
@@ -555,10 +594,20 @@ export default function IntakePage() {
                     name="psychologicalEvaluation"
                     accept=".pdf,.doc,.docx"
                     className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-yellow-400 file:text-black hover:file:bg-yellow-500"
+                    onChange={handleFileUpload}
+                    disabled={uploading}
                   />
-                  <p className="text-sm text-gray-500 mt-2">
-                    Accepted formats: PDF, DOC, DOCX (Max file size: 10MB)
-                  </p>
+                  {uploading && (
+                    <p className="text-sm text-gray-500 mt-2">Uploading...</p>
+                  )}
+                  {!uploading && fileUploaded && (
+                    <p className="text-sm text-green-600 mt-2">File uploaded successfully!</p>
+                  )}
+                  {!uploading && !fileUploaded && (
+                    <p className="text-sm text-gray-500 mt-2">
+                      Accepted formats: PDF, DOC, DOCX (Max file size: 10MB)
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
