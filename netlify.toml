@@ -27,4 +27,10 @@
 
 # Environment variables for deploy previews
 [context.deploy-preview.environment]
-  NEXT_PUBLIC_DOMAIN = "klubhousetherapyservices.com" 
+  NEXT_PUBLIC_DOMAIN = "klubhousetherapyservices.com"
+
+# Form webhook for logging submissions
+[[redirects]]
+  from = "/api/form-submission"
+  to = "/.netlify/functions/form-submission"
+  status = 200 
