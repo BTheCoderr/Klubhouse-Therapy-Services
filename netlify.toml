@@ -2,24 +2,8 @@
   command = "npm run build"
   publish = ".next"
 
-# Force rebuild to detect all Netlify forms - 2025-01-27
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
 [functions]
   external_node_modules = ["sharp"]
-
-# Form handling settings
-[build.processing]
-  skip_processing = false
-
-[build.processing.html]
-  pretty_urls = true
-
-# Force Netlify to detect forms during build
-[build.environment]
-  NEXT_STATIC_FORMS = "true"
 
 # Environment variables for production
 [context.production.environment]
@@ -27,10 +11,4 @@
 
 # Environment variables for deploy previews
 [context.deploy-preview.environment]
-  NEXT_PUBLIC_DOMAIN = "klubhousetherapyservices.com"
-
-# Form webhook for logging submissions
-[[redirects]]
-  from = "/api/form-submission"
-  to = "/.netlify/functions/form-submission"
-  status = 200 
+  NEXT_PUBLIC_DOMAIN = "klubhousetherapyservices.com" 

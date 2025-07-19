@@ -43,7 +43,7 @@ export default function IntakePage() {
             method="POST" 
             data-netlify="true" 
             data-netlify-honeypot="bot-field"
-            action="/.netlify/functions/form-submission"
+            action="/thank-you"
             className="space-y-8"
           >
             <input type="hidden" name="form-name" value="intake" />
