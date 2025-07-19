@@ -4,7 +4,7 @@
   <title>Intake Form</title>
 </head>
 <body>
-  <form name="intake" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you" method="POST" enctype="multipart/form-data" hidden>
+  <form name="intake" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you" method="POST" hidden>
     <input type="hidden" name="form-name" value="intake" />
     <p>
       <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -88,7 +88,7 @@
     <p><label>Community Resource Notes: <textarea name="communityResourceNotes"></textarea></label></p>
     
     <!-- File Attachment -->
-    <p><label>Psychological Evaluation: <input type="file" name="psychologicalEvaluation" /></label></p>
+    <p><label>Psychological Evaluation: <textarea name="psychologicalEvaluation"></textarea></label></p>
   </form>
 </body>
 </html> 

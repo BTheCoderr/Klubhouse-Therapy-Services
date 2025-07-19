@@ -44,7 +44,6 @@ export default function IntakePage() {
             data-netlify="true" 
             data-netlify-honeypot="bot-field"
             action="/thank-you"
-            encType="multipart/form-data"
             className="space-y-8"
           >
             <input type="hidden" name="form-name" value="intake" />
@@ -547,17 +546,21 @@ export default function IntakePage() {
               <div className="space-y-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Please attach Client's Psychological Evaluation (PDF, DOC, DOCX)
+                    Client's Psychological Evaluation Information
                   </label>
-                  <input
-                    type="file"
+                  <textarea
                     name="psychologicalEvaluation"
-                    accept=".pdf,.doc,.docx"
-                    className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-yellow-400 file:text-black hover:file:bg-yellow-500"
+                    rows={4}
+                    placeholder="Please provide the following information about the psychological evaluation:&#10;- Date of evaluation&#10;- Name of evaluator/psychologist&#10;- Type of evaluation&#10;- Key findings or diagnoses&#10;- Any additional notes"
+                    className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent resize-none"
                   />
-                  <p className="text-sm text-gray-500 mt-2">
-                    Accepted formats: PDF, DOC, DOCX (Max file size: 10MB)
-                  </p>
+                  <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                    <p className="text-sm text-blue-800">
+                      <strong>Important:</strong> Please email the actual psychological evaluation document to <strong>bferrell514@gmail.com</strong> with the subject line "Psychological Evaluation - [Child's Name]". 
+                      <br /><br />
+                      Include the child's name and your contact information in the email so we can match it with this form submission.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
