@@ -22,20 +22,13 @@ exports.handler = async function(event, context) {
     console.log('Submitted At:', new Date().toISOString());
     console.log('=== END FORM SUBMISSION ===');
 
-    // Send a simple response
+    // Redirect to thank you page
     return {
-      statusCode: 200,
+      statusCode: 302,
       headers: {
-        'Content-Type': 'application/json'
+        'Location': '/thank-you'
       },
-      body: JSON.stringify({ 
-        message: "Form submission logged successfully",
-        hasFile: !!data.psychologicalEvaluation,
-        fileInfo: data.psychologicalEvaluation ? {
-          type: typeof data.psychologicalEvaluation,
-          length: data.psychologicalEvaluation.length
-        } : null
-      })
+      body: ''
     };
   } catch (error) {
     console.error('Error processing form submission:', error);
