@@ -52,11 +52,12 @@ export default function IntakePage() {
             method="POST" 
             data-netlify="true" 
             data-netlify-honeypot="bot-field"
+            encType="multipart/form-data"
             action="/thank-you"
             className="space-y-8"
           >
             <input type="hidden" name="form-name" value="intake" />
-            <input type="hidden" name="psychologicalEvaluation" value={selectedFile?.name || ''} />
+
             
             {/* Honeypot field */}
             <p className="hidden">
