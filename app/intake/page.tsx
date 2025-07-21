@@ -44,7 +44,7 @@ export default function IntakePage() {
             encType="multipart/form-data"
             className="space-y-8"
           >
-            <input type="hidden" name="_redirect" value="https://klubhousetherapyservices.com/thank-you" />
+            <input type="hidden" name="_next" value="https://klubhousetherapyservices.com/thank-you" />
             {/* Honeypot field for spam prevention */}
             <input type="hidden" name="_gotcha" style={{display: 'none'}} />
             
@@ -573,6 +573,13 @@ export default function IntakePage() {
               <button
                 type="submit"
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-12 py-4 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 font-semibold text-lg"
+                onClick={(e) => {
+                  const form = (e.target as HTMLButtonElement).form;
+                  if (form) {
+                    console.log('Form submitting to:', form.action);
+                    console.log('Form data:', new FormData(form));
+                  }
+                }}
               >
                 Submit Intake Form
               </button>
