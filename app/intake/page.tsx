@@ -44,13 +44,9 @@ export default function IntakePage() {
             encType="multipart/form-data"
             className="space-y-8"
           >
+            <input type="hidden" name="_redirect" value="https://klubhousetherapyservices.com/thank-you" />
             {/* Honeypot field for spam prevention */}
             <input type="hidden" name="_gotcha" style={{display: 'none'}} />
-            
-            {/* Honeypot field */}
-            <p className="hidden">
-              <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-            </p>
             
             {/* Basic Information */}
             <div className="bg-white rounded-2xl shadow-lg p-8">
@@ -577,12 +573,6 @@ export default function IntakePage() {
               <button
                 type="submit"
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-12 py-4 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 font-semibold text-lg"
-                onClick={() => {
-                  // Redirect to thank you page after submission
-                  setTimeout(() => {
-                    window.location.href = '/thank-you';
-                  }, 1000);
-                }}
               >
                 Submit Intake Form
               </button>
