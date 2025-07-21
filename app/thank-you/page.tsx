@@ -54,8 +54,7 @@ export default function ThankYou() {
               
               <div className="space-y-6">
                 <p className="text-xl md:text-2xl text-gray-600 font-light max-w-md leading-relaxed">
-                  Your message has been sent successfully. We'll get back to you within 
-                  <span className="text-klubhouse-gold font-medium"> 24 hours</span>.
+                  Your message has been sent successfully. Someone will reach out to you shortly.
                 </p>
                 
                                  <p className="text-lg text-gray-600 font-light max-w-md leading-relaxed">
