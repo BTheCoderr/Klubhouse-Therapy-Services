@@ -38,12 +38,12 @@ export default function IntakePage() {
             </div>
           </div>
 
-          <form 
-            action="https://getform.io/f/avryokda"
-            method="POST" 
-            encType="multipart/form-data"
-            className="space-y-8"
-          >
+                      <form
+              action="https://getform.io/f/bejlkgwa"
+              method="POST"
+              encType="multipart/form-data"
+              className="space-y-8"
+            >
             <input type="hidden" name="_redirect" value="https://klubhousetherapyservices.com/thank-you" />
             {/* Honeypot field for spam prevention */}
             <input type="hidden" name="_gotcha" style={{display: 'none'}} />
