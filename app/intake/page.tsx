@@ -44,7 +44,7 @@ export default function IntakePage() {
               encType="multipart/form-data"
               className="space-y-8"
             >
-            <input type="hidden" name="_redirect" value="https://klubhousetherapyservices.com/thank-you" />
+            <input type="hidden" name="_next" value="https://klubhousetherapyservices.com/thank-you" />
             {/* Honeypot field for spam prevention */}
             <input type="hidden" name="_gotcha" style={{display: 'none'}} />
             
