@@ -1,5 +1,11 @@
 # Klubhouse Therapy Services
 
+<!-- repo-intro:start -->
+**Project snapshot:** The Klubhouse Therapy Services website combines a responsive service presence with a structured digital intake experience, file uploads, contact workflows, and production deployment.
+
+**What it demonstrates:** Next.js · TypeScript · Tailwind CSS · intake-form architecture · Netlify.
+<!-- repo-intro:end -->
+
 <div align="center">
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
